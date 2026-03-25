@@ -20,8 +20,8 @@ export function TeamGrid({ section }: { section: TeamGridSection }) {
 
       <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
         {section.persons?.map((person) => (
-          <div key={person._id} className="text-center">
-            <div className="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full bg-navy-100">
+          <div key={person._id} className="verksted-card bg-white p-6 text-center">
+            <div className="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full ring-2 ring-primary-500/20">
               {person.image?.asset ? (
                 <SanityImage
                   image={person.image}
@@ -31,7 +31,7 @@ export function TeamGrid({ section }: { section: TeamGridSection }) {
                   sizes="128px"
                 />
               ) : (
-                <div className="flex h-full w-full items-center justify-center text-3xl font-bold text-navy-300">
+                <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-primary-500 to-primary-700 text-3xl font-bold text-white">
                   {person.name?.charAt(0)}
                 </div>
               )}
@@ -40,7 +40,7 @@ export function TeamGrid({ section }: { section: TeamGridSection }) {
               {person.name}
             </h3>
             {person.role && (
-              <p className="mt-1 text-sm text-navy-600">{person.role}</p>
+              <p className="mt-1 mono-label text-copper-500">{person.role}</p>
             )}
             {person.bio && (
               <p className="mt-2 text-sm leading-relaxed text-navy-500">
@@ -52,7 +52,7 @@ export function TeamGrid({ section }: { section: TeamGridSection }) {
                 href={person.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-block text-primary-600 transition-colors hover:text-primary-700"
+                className="mt-2 inline-block text-navy-400 transition-colors hover:text-primary-500"
                 aria-label={`${person.name} på LinkedIn`}
               >
                 <svg

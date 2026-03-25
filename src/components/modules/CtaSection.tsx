@@ -3,6 +3,8 @@ import { SectionWrapper } from '@/components/ui/SectionWrapper'
 import { Button } from '@/components/ui/Button'
 
 export function CtaSection({ section }: { section: CtaSectionSection }) {
+  const isDark = section.style === 'dark'
+
   return (
     <SectionWrapper style={section.style}>
       <div className="mx-auto max-w-2xl text-center">
@@ -12,19 +14,22 @@ export function CtaSection({ section }: { section: CtaSectionSection }) {
           </h2>
         )}
         {section.description && (
-          <p className="mt-4 text-lg opacity-80">{section.description}</p>
+          <p className={`mt-4 text-lg ${isDark ? 'text-navy-300' : 'opacity-80'}`}>
+            {section.description}
+          </p>
         )}
         {(section.primaryCta?.text || section.secondaryCta?.text) && (
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             {section.primaryCta?.text && (
-              <Button href={section.primaryCta.link} variant="primary">
+              <Button href={section.primaryCta.link} variant="primary" className={isDark ? 'pulse-glow' : ''}>
                 {section.primaryCta.text}
               </Button>
             )}
             {section.secondaryCta?.text && (
               <Button
                 href={section.secondaryCta.link}
-                variant={section.style === 'default' ? 'outline' : 'ghost'}
+                variant={isDark ? 'ghost' : 'outline'}
+                className={isDark ? 'text-navy-300 hover:text-white' : ''}
               >
                 {section.secondaryCta.text}
               </Button>

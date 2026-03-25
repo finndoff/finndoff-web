@@ -107,7 +107,7 @@ export function PricingCalculator({
             return (
               <div
                 key={mod.name}
-                className={`relative flex flex-col rounded-2xl border-2 p-6 transition-colors ${
+                className={`verksted-card relative flex flex-col border-2 p-6 transition-colors ${
                   isActive
                     ? 'border-primary-500 bg-primary-50/30'
                     : 'border-navy-100 bg-white'
@@ -121,12 +121,12 @@ export function PricingCalculator({
                         {mod.name}
                       </h3>
                       {mod.isAddon && (
-                        <span className="rounded-full bg-accent-100 px-2.5 py-0.5 text-xs font-semibold text-accent-800">
+                        <span className="mono-label rounded bg-primary-500/10 px-2.5 py-1 text-primary-600">
                           Tillegg
                         </span>
                       )}
                       {mod.alwaysIncluded && (
-                        <span className="rounded-full bg-primary-100 px-2.5 py-0.5 text-xs font-semibold text-primary-700">
+                        <span className="mono-label rounded bg-accent-500/10 px-2.5 py-1 text-accent-700">
                           Inkludert
                         </span>
                       )}
@@ -158,15 +158,15 @@ export function PricingCalculator({
                 </div>
 
                 {/* Price */}
-                <p className="mt-4 font-display text-2xl font-bold text-primary-500">
-                  {mod.priceLabel}
+                <p className="mt-4">
+                  <span className="mono-price text-2xl text-navy-900">{mod.priceLabel}</span>
                 </p>
 
                 {/* Features */}
                 <ul className="mt-4 flex-1 space-y-2">
                   {mod.features.map((f, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent-500" />
                       <span>{f}</span>
                     </li>
                   ))}
@@ -176,13 +176,13 @@ export function PricingCalculator({
           })}
 
           {/* Konsulent card */}
-          <div className="relative flex flex-col rounded-2xl border-2 border-navy-100 bg-white p-6">
+          <div className="verksted-card relative flex flex-col border-2 border-navy-100 bg-white p-6">
             <div className="flex-1">
               <div className="flex items-center gap-2">
                 <h3 className="font-display text-xl font-bold">
                   Anbudskonsulent
                 </h3>
-                <span className="rounded-full bg-navy-100 px-2.5 py-0.5 text-xs font-semibold text-navy-600">
+                <span className="mono-label rounded bg-copper-500/10 px-2.5 py-1 text-copper-600">
                   Rådgivning
                 </span>
               </div>
@@ -190,20 +190,20 @@ export function PricingCalculator({
                 Personlig rådgivning fra erfarne anbudskonsulenter via vår
                 partner TendPro.
               </p>
-              <p className="mt-4 font-display text-xl font-semibold text-primary-500">
-                Etter avtale
+              <p className="mt-4">
+                <span className="mono-price text-xl text-navy-900">Etter avtale</span>
               </p>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-start gap-2 text-sm">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent-500" />
                   <span>Gjennomgang av konkurransegrunnlag</span>
                 </li>
                 <li className="flex items-start gap-2 text-sm">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent-500" />
                   <span>Hjelp med tilbudsskrivning</span>
                 </li>
                 <li className="flex items-start gap-2 text-sm">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent-500" />
                   <span>Strategisk rådgivning</span>
                 </li>
               </ul>
@@ -222,15 +222,15 @@ export function PricingCalculator({
         </div>
 
         {/* Extra users */}
-        <div className="mt-8 rounded-2xl border-2 border-navy-100 bg-white p-6">
+        <div className="mt-8 verksted-card border-2 border-navy-100 bg-white p-6">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <div>
               <h3 className="font-display text-lg font-bold">
                 Ekstra brukere
               </h3>
               <p className="text-sm text-navy-600">
-                2 brukere er inkludert i Varsling. Legg til flere for 199 kr/mnd
-                per bruker.
+                2 brukere er inkludert i Varsling. Legg til flere for{' '}
+                <span className="font-mono font-semibold">199 kr/mnd</span> per bruker.
               </p>
             </div>
             <div className="flex items-center gap-3">
@@ -243,7 +243,7 @@ export function PricingCalculator({
               >
                 <Minus className="h-4 w-4" />
               </button>
-              <span className="w-8 text-center font-display text-xl font-bold">
+              <span className="w-8 text-center mono-price text-xl">
                 {extraUsers}
               </span>
               <button
@@ -255,7 +255,7 @@ export function PricingCalculator({
                 <Plus className="h-4 w-4" />
               </button>
               {extraUsers > 0 && (
-                <span className="ml-2 text-sm text-navy-500">
+                <span className="ml-2 text-sm font-mono text-navy-500">
                   +{extraUsers * EXTRA_USER_PRICE} kr/mnd
                 </span>
               )}
@@ -264,28 +264,34 @@ export function PricingCalculator({
         </div>
 
         {/* Total + CTA */}
-        <div className="mt-8 rounded-2xl bg-navy-900 p-8 text-center">
-          <p className="text-sm font-medium text-navy-300">Din månedspris</p>
-          <p className="mt-2 font-display text-5xl font-bold text-primary-400">
-            {total.toLocaleString('nb-NO')}{' '}
-            <span className="text-xl font-normal text-navy-400">kr/mnd</span>
-          </p>
-          <p className="mt-2 text-sm text-navy-400">eks. mva</p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Button
-              href="https://app.finndoff.no/register"
-              variant="primary"
-              className="w-full sm:w-auto"
-            >
-              Start gratis prøveperiode
-            </Button>
-            <Button
-              href="https://meetings-eu1.hubspot.com/daniel-dalsborg"
-              variant="ghost"
-              className="text-navy-300 hover:text-white"
-            >
-              Book demo med Daniel
-            </Button>
+        <div className="relative mt-8 overflow-hidden rounded-2xl bg-navy-900 p-8 text-center">
+          <div className="blueprint-grid-dark absolute inset-0 pointer-events-none" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] pointer-events-none" style={{ background: 'radial-gradient(ellipse at center, rgba(0,132,137,0.15) 0%, transparent 70%)' }} />
+          <div className="relative">
+            <p className="mono-label text-navy-400">Din månedspris</p>
+            <p className="mt-3">
+              <span className="mono-price text-5xl text-primary-400">
+                {total.toLocaleString('nb-NO')}
+              </span>
+              <span className="ml-2 text-xl text-navy-400">kr/mnd</span>
+            </p>
+            <p className="mt-2 text-sm text-navy-500 font-mono">eks. mva</p>
+            <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <Button
+                href="https://app.finndoff.no/register"
+                variant="primary"
+                className="w-full sm:w-auto pulse-glow"
+              >
+                Start gratis prøveperiode
+              </Button>
+              <Button
+                href="https://meetings-eu1.hubspot.com/daniel-dalsborg"
+                variant="ghost"
+                className="text-navy-300 hover:text-white"
+              >
+                Book demo med Daniel
+              </Button>
+            </div>
           </div>
         </div>
       </div>

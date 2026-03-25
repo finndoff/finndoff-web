@@ -60,9 +60,11 @@ export function ContactSection({
             <div className="space-y-6">
               {section.email && (
                 <div className="flex items-start gap-4">
-                  <Mail className="mt-0.5 h-5 w-5 shrink-0 text-primary-500" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500/10 shrink-0">
+                    <Mail className="h-5 w-5 text-primary-500" />
+                  </div>
                   <div>
-                    <p className="text-sm font-medium text-navy-500">E-post</p>
+                    <p className="mono-label text-navy-500">E-post</p>
                     <a
                       href={`mailto:${section.email}`}
                       className="text-navy-900 transition-colors hover:text-primary-600"
@@ -74,9 +76,11 @@ export function ContactSection({
               )}
               {section.phone && (
                 <div className="flex items-start gap-4">
-                  <Phone className="mt-0.5 h-5 w-5 shrink-0 text-primary-500" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500/10 shrink-0">
+                    <Phone className="h-5 w-5 text-primary-500" />
+                  </div>
                   <div>
-                    <p className="text-sm font-medium text-navy-500">Telefon</p>
+                    <p className="mono-label text-navy-500">Telefon</p>
                     <a
                       href={`tel:${section.phone.replace(/\s/g, '')}`}
                       className="text-navy-900 transition-colors hover:text-primary-600"
@@ -88,9 +92,11 @@ export function ContactSection({
               )}
               {section.address && (
                 <div className="flex items-start gap-4">
-                  <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary-500" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500/10 shrink-0">
+                    <MapPin className="h-5 w-5 text-primary-500" />
+                  </div>
                   <div>
-                    <p className="text-sm font-medium text-navy-500">Adresse</p>
+                    <p className="mono-label text-navy-500">Adresse</p>
                     <p className="whitespace-pre-line text-navy-900">
                       {section.address}
                     </p>
@@ -105,11 +111,11 @@ export function ContactSection({
                 {section.contactPersons.map((person, i) => (
                   <div
                     key={person._key || i}
-                    className="rounded-xl border border-navy-100 p-5"
+                    className="verksted-card border-l-4 border-l-primary-500 border border-navy-100 bg-white p-5"
                   >
                     <p className="font-display font-semibold">{person.name}</p>
                     {person.role && (
-                      <p className="text-sm text-navy-500">{person.role}</p>
+                      <p className="mono-label mt-1 text-copper-500">{person.role}</p>
                     )}
                     <div className="mt-3 flex flex-wrap gap-4 text-sm">
                       {person.phone && (
@@ -148,7 +154,7 @@ export function ContactSection({
 
           {/* HubSpot form */}
           {section.hubspotPortalId && section.hubspotFormId && (
-            <div className="rounded-2xl border border-navy-100 bg-navy-50 p-6 lg:p-8">
+            <div className="verksted-card bg-white p-6 lg:p-8">
               <h3 className="mb-4 font-display text-xl font-semibold">
                 Send oss en melding
               </h3>

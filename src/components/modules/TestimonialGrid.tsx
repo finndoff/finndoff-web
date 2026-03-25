@@ -23,10 +23,9 @@ export function TestimonialGrid({ section }: { section: TestimonialGridSection }
         {section.items.map((item, i) => (
           <figure
             key={i}
-            className="flex flex-col rounded-2xl border border-navy-100 bg-white p-8 shadow-sm"
+            className="verksted-card flex flex-col border-l-4 border-l-primary-500 border border-navy-100 bg-white p-8"
           >
-            {/* Dekorativ anførselstegn */}
-            <div className="mb-4 font-display text-5xl leading-none text-primary-200 select-none">
+            <div className="mb-4 font-display text-4xl leading-none text-primary-300 select-none">
               &ldquo;
             </div>
             <blockquote className="flex-1">
@@ -38,11 +37,11 @@ export function TestimonialGrid({ section }: { section: TestimonialGridSection }
                   image={item.image}
                   width={48}
                   height={48}
-                  className="h-12 w-12 rounded-full object-cover shrink-0"
+                  className="h-12 w-12 rounded-full object-cover shrink-0 ring-2 ring-primary-500/20"
                 />
               ) : (
-                <div className="h-12 w-12 rounded-full bg-primary-100 flex items-center justify-center shrink-0">
-                  <span className="font-display font-bold text-primary-600 text-lg">
+                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shrink-0">
+                  <span className="font-display font-bold text-white text-lg">
                     {item.name?.[0] ?? '?'}
                   </span>
                 </div>

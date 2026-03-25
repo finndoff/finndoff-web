@@ -20,7 +20,7 @@ export function PartnerShowcase({ section }: { section: PartnerShowcaseSection }
       <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
         {section.partners?.map((partner) => {
           const content = (
-            <div className="flex flex-col items-center gap-3 rounded-xl border border-navy-100 bg-white p-6 text-center transition-shadow hover:shadow-lg">
+            <div className="verksted-card flex flex-col items-center gap-3 border border-navy-100 bg-white p-6 text-center">
               {partner.logo?.asset && (
                 <SanityImage
                   image={partner.logo}

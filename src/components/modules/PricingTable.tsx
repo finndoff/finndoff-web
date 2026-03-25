@@ -22,22 +22,26 @@ export function PricingTable({ section }: { section: PricingTableSection }) {
         {section.plans?.map((plan) => (
           <div
             key={plan._key}
-            className={`relative flex flex-col rounded-2xl border-2 p-8 ${
+            className={`verksted-card relative flex flex-col border-2 bg-white p-8 ${
               plan.highlighted
-                ? 'border-primary-500 shadow-xl'
+                ? 'border-copper-500 shadow-[var(--shadow-verksted-lg)]'
                 : 'border-navy-100'
             }`}
           >
+            {plan.highlighted && (
+              <div className="absolute -top-px left-8 right-8 h-[3px] bg-gradient-to-r from-copper-400 via-copper-500 to-copper-400" />
+            )}
             {plan.isAddon && (
-              <span className="mb-4 inline-block w-fit rounded-full bg-accent-100 px-3 py-1 text-xs font-semibold text-accent-800">
+              <span className="mono-label mb-4 inline-block w-fit rounded bg-primary-500/10 px-3 py-1 text-primary-600">
                 Tillegg
               </span>
             )}
             <h3 className="font-display text-xl font-bold">{plan.name}</h3>
             <div className="mt-4">
               {plan.price != null ? (
-                <p className="font-display text-3xl font-bold text-primary-500">
-                  {plan.price} <span className="text-base font-normal text-navy-500">kr/mnd</span>
+                <p>
+                  <span className="mono-price text-3xl text-navy-900">{plan.price}</span>
+                  <span className="ml-1 text-sm text-navy-500">kr/mnd</span>
                 </p>
               ) : plan.priceLabel ? (
                 <p className="font-display text-xl font-semibold text-primary-500">
@@ -46,13 +50,13 @@ export function PricingTable({ section }: { section: PricingTableSection }) {
               ) : null}
             </div>
             {plan.description && (
-              <p className="mt-3 text-sm text-navy-600">{plan.description}</p>
+              <p className="mt-3 text-sm text-navy-600 leading-relaxed">{plan.description}</p>
             )}
             {plan.features && plan.features.length > 0 && (
               <ul className="mt-6 flex-1 space-y-3">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent-500" />
                     <span>{feature}</span>
                   </li>
                 ))}

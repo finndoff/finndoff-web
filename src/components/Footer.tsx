@@ -19,8 +19,14 @@ const companyLinks = [
 
 export function Footer({ logoUrl }: { logoUrl?: string | null }) {
   return (
-    <footer className="bg-navy-900 text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <footer className="relative bg-navy-900 text-white overflow-hidden">
+      {/* Blueprint grid texture */}
+      <div className="blueprint-grid-dark absolute inset-0 pointer-events-none" />
+
+      {/* Teal glow accent */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-primary-500/40 to-transparent" />
+
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
           {/* Brand column */}
           <div className="md:col-span-2">
@@ -28,14 +34,14 @@ export function Footer({ logoUrl }: { logoUrl?: string | null }) {
             <p className="mt-4 max-w-md text-sm leading-relaxed text-navy-400">
               Menneske + Maskin = Bedre anbudsresultater
             </p>
-            <p className="mt-4 text-sm text-navy-400">
+            <p className="mt-3 font-mono text-xs tracking-wider text-navy-500">
               Finndoff AS &middot; Org. 927 436 442
             </p>
           </div>
 
           {/* Products */}
           <div>
-            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-navy-300">
+            <h3 className="mono-label text-copper-400">
               Produkter
             </h3>
             <ul className="mt-4 space-y-2">
@@ -43,7 +49,7 @@ export function Footer({ logoUrl }: { logoUrl?: string | null }) {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-navy-400 transition-colors hover:text-white"
+                    className="text-sm text-navy-400 transition-colors hover:text-primary-400"
                   >
                     {link.label}
                   </Link>
@@ -54,7 +60,7 @@ export function Footer({ logoUrl }: { logoUrl?: string | null }) {
 
           {/* Company */}
           <div>
-            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-navy-300">
+            <h3 className="mono-label text-copper-400">
               Selskap
             </h3>
             <ul className="mt-4 space-y-2">
@@ -62,7 +68,7 @@ export function Footer({ logoUrl }: { logoUrl?: string | null }) {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-navy-400 transition-colors hover:text-white"
+                    className="text-sm text-navy-400 transition-colors hover:text-primary-400"
                   >
                     {link.label}
                   </Link>
@@ -73,7 +79,7 @@ export function Footer({ logoUrl }: { logoUrl?: string | null }) {
 
           {/* Contact / Addresses */}
           <div>
-            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-navy-300">
+            <h3 className="mono-label text-copper-400">
               Kontakt
             </h3>
             <div className="mt-4 space-y-4">
@@ -92,8 +98,8 @@ export function Footer({ logoUrl }: { logoUrl?: string | null }) {
         </div>
 
         {/* Bottom row */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-navy-700 pt-8 sm:flex-row">
-          <p className="text-sm text-navy-400">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-navy-700/50 pt-8 sm:flex-row">
+          <p className="text-sm text-navy-500">
             &copy; {new Date().getFullYear()} Finndoff AS. Alle rettigheter reservert.
           </p>
           <div className="flex items-center gap-4">
@@ -101,7 +107,7 @@ export function Footer({ logoUrl }: { logoUrl?: string | null }) {
               href="https://www.linkedin.com/company/finndoff"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-navy-400 transition-colors hover:text-white"
+              className="text-navy-500 transition-colors hover:text-primary-400"
               aria-label="Finndoff på LinkedIn"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -112,7 +118,7 @@ export function Footer({ logoUrl }: { logoUrl?: string | null }) {
               href="https://www.facebook.com/people/Finndoff/100077230503459/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-navy-400 transition-colors hover:text-white"
+              className="text-navy-500 transition-colors hover:text-primary-400"
               aria-label="Finndoff på Facebook"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -123,7 +129,7 @@ export function Footer({ logoUrl }: { logoUrl?: string | null }) {
               href="https://www.youtube.com/@Finndoff"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-navy-400 transition-colors hover:text-white"
+              className="text-navy-500 transition-colors hover:text-primary-400"
               aria-label="Finndoff på YouTube"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">

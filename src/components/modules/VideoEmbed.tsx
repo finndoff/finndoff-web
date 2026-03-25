@@ -36,14 +36,14 @@ export function VideoEmbed({ section }: { section: VideoEmbedSection }) {
   const fallbackThumb = getYouTubeThumbnail(section.videoUrl)
 
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section className="py-16 lg:py-24">
       <div className="mx-auto max-w-4xl px-6">
         {section.title && (
           <h2 className="mb-8 text-center font-display text-3xl font-bold lg:text-4xl">
             {section.title}
           </h2>
         )}
-        <div className="relative aspect-video overflow-hidden rounded-2xl bg-navy-100">
+        <div className="verksted-card relative aspect-video overflow-hidden bg-navy-900">
           {playing ? (
             <iframe
               src={embedUrl}
@@ -72,7 +72,8 @@ export function VideoEmbed({ section }: { section: VideoEmbedSection }) {
                   className="absolute inset-0 h-full w-full object-cover"
                 />
               ) : null}
-              <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-primary-500 text-white shadow-lg transition-transform group-hover:scale-110">
+              <div className="absolute inset-0 bg-navy-900/20" />
+              <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-accent-500 text-navy-900 shadow-[var(--shadow-verksted-lg)] transition-transform group-hover:scale-110">
                 <Play className="h-7 w-7 fill-current" />
               </div>
             </button>

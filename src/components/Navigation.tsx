@@ -18,9 +18,10 @@ export function Navigation({ logoUrl }: { logoUrl?: string | null }) {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="glass-light fixed top-0 right-0 left-0 z-50 border-b border-navy-100">
-      <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Logo logoUrl={logoUrl} />
+    <header className="glass-dark fixed top-0 right-0 left-0 z-50 border-b border-white/10">
+      <div className="blueprint-grid absolute inset-0 pointer-events-none" />
+      <nav className="relative mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Logo logoUrl={logoUrl} variant="dark" />
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-1 lg:flex">
@@ -28,7 +29,7 @@ export function Navigation({ logoUrl }: { logoUrl?: string | null }) {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-navy-700 transition-colors hover:text-primary-500"
+                className="rounded-md px-3 py-2 text-sm font-medium text-navy-300 transition-colors hover:text-primary-400"
               >
                 {link.label}
               </Link>
@@ -40,13 +41,13 @@ export function Navigation({ logoUrl }: { logoUrl?: string | null }) {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href="https://login.finndoff.no/"
-            className="font-display rounded-lg border-2 border-primary-500 px-5 py-2 text-sm font-semibold text-primary-500 transition-colors hover:bg-primary-50"
+            className="font-display rounded-lg border border-navy-500 px-5 py-2 text-sm font-semibold text-navy-200 transition-colors hover:border-primary-500 hover:text-primary-400"
           >
             Logg inn
           </a>
           <a
             href="https://finndoff.no/signup"
-            className="font-display rounded-lg bg-accent-500 px-5 py-2 text-sm font-semibold text-navy-900 transition-colors hover:bg-accent-600"
+            className="font-display rounded-lg bg-accent-500 px-5 py-2 text-sm font-semibold text-navy-900 transition-colors hover:bg-accent-400 pulse-glow"
           >
             Prøv gratis
           </a>
@@ -55,7 +56,7 @@ export function Navigation({ logoUrl }: { logoUrl?: string | null }) {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="rounded-md p-2 text-navy-700 lg:hidden"
+          className="rounded-md p-2 text-navy-300 lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? 'Lukk meny' : 'Åpne meny'}
           aria-expanded={mobileOpen}
@@ -77,13 +78,13 @@ export function Navigation({ logoUrl }: { logoUrl?: string | null }) {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="glass-light border-t border-navy-100 lg:hidden">
+        <div className="glass-dark border-t border-white/10 lg:hidden">
           <div className="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block rounded-md px-3 py-2 text-base font-medium text-navy-700 transition-colors hover:bg-primary-50 hover:text-primary-500"
+                className="block rounded-md px-3 py-2 text-base font-medium text-navy-300 transition-colors hover:bg-white/5 hover:text-primary-400"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
@@ -92,13 +93,13 @@ export function Navigation({ logoUrl }: { logoUrl?: string | null }) {
             <div className="flex flex-col gap-3 pt-4">
               <a
                 href="https://login.finndoff.no/"
-                className="font-display rounded-lg border-2 border-primary-500 px-5 py-2.5 text-center text-sm font-semibold text-primary-500 transition-colors hover:bg-primary-50"
+                className="font-display rounded-lg border border-navy-500 px-5 py-2.5 text-center text-sm font-semibold text-navy-200 transition-colors hover:border-primary-500 hover:text-primary-400"
               >
                 Logg inn
               </a>
               <a
                 href="https://finndoff.no/signup"
-                className="font-display rounded-lg bg-accent-500 px-5 py-2.5 text-center text-sm font-semibold text-navy-900 transition-colors hover:bg-accent-600"
+                className="font-display rounded-lg bg-accent-500 px-5 py-2.5 text-center text-sm font-semibold text-navy-900 transition-colors hover:bg-accent-400"
               >
                 Prøv gratis
               </a>

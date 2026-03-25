@@ -48,8 +48,8 @@ export function PageBuilder({ sections }: { sections?: Section[] }) {
         const bgClass = hasExplicitStyle
           ? ''
           : index % 2 === 1
-            ? 'bg-primary-50'
-            : 'bg-white'
+            ? 'bg-primary-50/50 blueprint-grid-light'
+            : 'bg-warm-50'
         return (
           <div key={section._key} className={bgClass}>
             <Component section={section} />

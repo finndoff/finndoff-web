@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Work_Sans } from "next/font/google";
+import { Roboto, Work_Sans, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -20,6 +20,12 @@ const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://finndoff.no";
@@ -63,7 +69,7 @@ export default async function RootLayout({
   return (
     <html lang="no">
       <body
-        className={`${roboto.variable} ${workSans.variable} antialiased`}
+        className={`${roboto.variable} ${workSans.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <JsonLd
           data={{

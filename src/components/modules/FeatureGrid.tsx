@@ -29,23 +29,24 @@ export function FeatureGrid({ section }: { section: FeatureGridSection }) {
         {section.features?.map((feature) => (
           <div
             key={feature._key}
-            className="rounded-xl border border-navy-100 bg-white p-6 transition-shadow hover:shadow-lg"
+            className="verksted-card border-l-4 border-l-primary-500 border border-navy-100 bg-white p-6"
           >
             {feature.icon && (
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-50 text-primary-500">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-500/8 text-primary-500">
                 <DynamicIcon name={feature.icon} />
               </div>
             )}
             <h3 className="font-display text-lg font-semibold">{feature.title}</h3>
             {feature.description && (
-              <p className="mt-2 text-navy-600">{feature.description}</p>
+              <p className="mt-2 text-navy-600 leading-relaxed">{feature.description}</p>
             )}
             {feature.link && (
               <a
                 href={feature.link}
-                className="mt-4 inline-block text-sm font-medium text-primary-500 hover:text-primary-600"
+                className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary-500 hover:text-primary-600 transition-colors"
               >
-                Les mer &rarr;
+                Les mer
+                <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
               </a>
             )}
           </div>

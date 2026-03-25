@@ -9,7 +9,7 @@ export function FaqAccordion({ section }: { section: FaqAccordionSection }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section className="py-16 lg:py-24">
       <div className="mx-auto max-w-3xl px-6">
         {(section.title || section.subtitle) && (
           <div className="mb-12 text-center">
@@ -23,26 +23,26 @@ export function FaqAccordion({ section }: { section: FaqAccordionSection }) {
             )}
           </div>
         )}
-        <div className="divide-y divide-navy-100 border-y border-navy-100">
+        <div className="divide-y divide-navy-100">
           {section.items?.map((item, index) => {
             const isOpen = openIndex === index
             return (
-              <div key={item._key}>
+              <div key={item._key} className="group">
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="flex w-full items-center justify-between gap-4 py-5 text-left"
+                  className="flex w-full items-center justify-between gap-4 py-5 text-left transition-colors hover:text-primary-600"
                 >
-                  <span className="font-display text-lg font-semibold text-navy-900">
+                  <span className="font-display text-lg font-semibold text-navy-900 group-hover:text-primary-600 transition-colors">
                     {item.question}
                   </span>
                   <ChevronDown
-                    className={`h-5 w-5 shrink-0 text-navy-400 transition-transform ${
-                      isOpen ? 'rotate-180' : ''
+                    className={`h-5 w-5 shrink-0 text-navy-400 transition-transform duration-200 ${
+                      isOpen ? 'rotate-180 text-primary-500' : ''
                     }`}
                   />
                 </button>
                 {isOpen && (
-                  <div className="pb-5 text-navy-700">
+                  <div className="pb-5 pl-0 text-navy-700 border-l-2 border-primary-400 ml-0 pl-4">
                     <PortableTextRenderer value={item.answer} />
                   </div>
                 )}

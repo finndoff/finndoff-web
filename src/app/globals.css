@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 /*
- * Finndoff Design System
- * Brand palette from Styleguide V0.1 (jan 2024)
- * Fonts: Roboto (body) + Work Sans (display)
+ * Finndoff "Verkstedet" Design System
+ * Technical workshop aesthetic: blueprint grids, warm navy, teal accents
+ * Fonts: Roboto (body) + Work Sans (display) + JetBrains Mono (data/prices)
  */
 
 @theme {
@@ -43,6 +43,18 @@
   --color-navy-800: #112a3b;
   --color-navy-900: #0B2333;
 
+  /* ── Copper: Verktøy-metall #C17F3E ── */
+  --color-copper-50: #fdf9f3;
+  --color-copper-100: #fbf3e8;
+  --color-copper-200: #f5e2c4;
+  --color-copper-300: #ebca94;
+  --color-copper-400: #e0b06a;
+  --color-copper-500: #C17F3E;
+  --color-copper-600: #a56a32;
+  --color-copper-700: #875526;
+  --color-copper-800: #6a411b;
+  --color-copper-900: #4d2e12;
+
   /* ── Lime: #B2EE51 (support/graphics only) ── */
   --color-lime-300: #d4f5a1;
   --color-lime-400: #c3f179;
@@ -54,9 +66,22 @@
   --color-warning: #FFCB05;
   --color-error: #EC5B5B;
 
+  /* ── Warm off-white (Verkstedet background) ── */
+  --color-warm-50: #FAFAF7;
+  --color-warm-100: #F5F4EF;
+  --color-warm-200: #EEEDEA;
+
   /* ── Font families ── */
   --font-body: var(--font-roboto), "Roboto", system-ui, sans-serif;
   --font-display: var(--font-work-sans), "Work Sans", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, monospace;
+
+  /* ── Verkstedet Shadows (navy-tinted) ── */
+  --shadow-verksted-sm: 0 1px 3px rgba(11,35,51,0.08), 0 1px 2px rgba(11,35,51,0.06);
+  --shadow-verksted-md: 0 4px 12px rgba(11,35,51,0.1), 0 2px 4px rgba(11,35,51,0.06);
+  --shadow-verksted-lg: 0 8px 24px rgba(11,35,51,0.12), 0 4px 8px rgba(11,35,51,0.06);
+  --shadow-verksted-hover: 0 8px 24px rgba(11,35,51,0.14), 0 4px 8px rgba(11,35,51,0.06);
+  --shadow-verksted-glow: 0 0 40px rgba(0,132,137,0.15), 0 0 80px rgba(0,132,137,0.08);
 }
 
 /* ── Base ── */
@@ -65,13 +90,114 @@ html {
 }
 
 body {
-  background: #fafbfc;
+  background: var(--color-warm-50);
   color: var(--color-navy-900);
   font-family: var(--font-body), system-ui, sans-serif;
 }
 
 .font-display {
   font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+/* ── Blueprint Grid Texture ── */
+.blueprint-grid {
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,132,137,0.05) 39px, rgba(0,132,137,0.05) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,132,137,0.05) 39px, rgba(0,132,137,0.05) 40px);
+}
+
+.blueprint-grid-light {
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,132,137,0.03) 39px, rgba(0,132,137,0.03) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,132,137,0.03) 39px, rgba(0,132,137,0.03) 40px);
+}
+
+.blueprint-grid-dark {
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,132,137,0.08) 39px, rgba(0,132,137,0.08) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,132,137,0.08) 39px, rgba(0,132,137,0.08) 40px);
+}
+
+/* ── Dark Gradient ── */
+.verksted-gradient {
+  background: linear-gradient(135deg, #0B2333 0%, #0a1e2e 50%, #008489 150%);
+}
+
+.verksted-gradient-subtle {
+  background: linear-gradient(135deg, #0B2333 0%, #0e2a3d 60%, #0f3040 100%);
+}
+
+/* ── Teal Glow ── */
+.teal-glow {
+  position: relative;
+}
+.teal-glow::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,132,137,0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Verkstedet Card ── */
+.verksted-card {
+  border-radius: 16px;
+  box-shadow: var(--shadow-verksted-sm);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.verksted-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-verksted-hover);
+}
+
+/* ── Left Border Accent Cards ── */
+.border-accent-left {
+  border-left: 4px solid var(--color-primary-500);
+}
+.border-accent-left-copper {
+  border-left: 4px solid var(--color-copper-500);
+}
+.border-accent-left-green {
+  border-left: 4px solid var(--color-accent-500);
+}
+
+/* ── Monospace Data Display ── */
+.mono-label {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.mono-price {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* ── Sticky Header — Dark Glass ── */
+.glass-dark {
+  background: rgba(11, 35, 51, 0.92);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+}
+
+/* ── Legacy glass-light (kept for mobile menu fallback) ── */
+.glass-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 /* ── TrustBar scroll animation ── */
@@ -88,9 +214,37 @@ body {
   animation: scroll 30s linear infinite;
 }
 
-/* ── Glass effect for sticky header ── */
-.glass-light {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+/* ── Fade-in animation for sections ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Subtle pulse glow for CTAs ── */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(29, 224, 142, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgba(29, 224, 142, 0.15);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* ── Copper shimmer for highlighted elements ── */
+.copper-border {
+  border-image: linear-gradient(135deg, var(--color-copper-400), var(--color-copper-600), var(--color-copper-400)) 1;
 }
