@@ -14,7 +14,7 @@ export function LayoutShell({ children, logoUrl, logoDarkUrl }: { children: Reac
 
   return (
     <>
-      <Navigation logoUrl={logoUrl} />
+      <Navigation logoUrl={logoDarkUrl} />
       <main className="pt-[72px]">{children}</main>
       <Footer logoUrl={logoDarkUrl} />
     </>

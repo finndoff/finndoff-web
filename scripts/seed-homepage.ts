@@ -46,7 +46,7 @@ const homepage = {
       headline: "Vi hjelper norske bedrifter vinne anbud",
       subheadline:
         "Ikke bare finne dem. Ikke bare varsle om dem. Vinne dem. Finndoff kombinerer fagkompetanse, teknologi og bransjenettverk slik at små og mellomstore bedrifter kan konkurrere — og slå — de store.",
-      showSearchBar: false,
+      showSearchBar: true,
       primaryCta: {
         text: "Prøv gratis — vi setter opp alt",
         link: "https://finndoff.no/signup",

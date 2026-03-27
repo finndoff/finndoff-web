@@ -42,28 +42,25 @@ export function Hero({ section }: { section: HeroSection }) {
                 {section.subheadline}
               </p>
             )}
-            {section.showSearchBar ? (
-              <HeroSearchBar />
-            ) : (
-              (section.primaryCta?.text || section.secondaryCta?.text) && (
-                <div className="mt-8 flex flex-wrap gap-4">
-                  {section.primaryCta?.text && (
-                    <Button href={section.primaryCta.link} variant="primary" className="pulse-glow">
-                      {section.primaryCta.text}
-                    </Button>
-                  )}
-                  {section.secondaryCta?.text && (
-                    <Button
-                      href={section.secondaryCta.link}
-                      variant="outline"
-                      className="border-navy-500 text-navy-200 hover:border-primary-500 hover:bg-primary-500/10 hover:text-white"
-                    >
-                      {section.secondaryCta.text}
-                    </Button>
-                  )}
-                </div>
-              )
+            {(section.primaryCta?.text || section.secondaryCta?.text) && (
+              <div className="mt-8 flex flex-wrap gap-4">
+                {section.primaryCta?.text && (
+                  <Button href={section.primaryCta.link} variant="primary" className="pulse-glow">
+                    {section.primaryCta.text}
+                  </Button>
+                )}
+                {section.secondaryCta?.text && (
+                  <Button
+                    href={section.secondaryCta.link}
+                    variant="outline"
+                    className="border-navy-500 text-navy-200 hover:border-primary-500 hover:bg-primary-500/10 hover:text-white"
+                  >
+                    {section.secondaryCta.text}
+                  </Button>
+                )}
+              </div>
             )}
+            {section.showSearchBar && <HeroSearchBar />}
             {section.stats && section.stats.length > 0 && (
               <div className="mt-10 flex flex-wrap gap-8 border-t border-white/10 pt-8">
                 {section.stats.map((stat, i) => (
