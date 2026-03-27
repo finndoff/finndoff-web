@@ -35,6 +35,9 @@ npm run build      # Production build
 - `SectionWrapper` handles section styling: default, dark (verksted-gradient + blueprint grid), brand
 - All content is editable in Sanity Studio — components are presentation-only
 - SEO: sitemap, robots, OG images, JSON-LD schemas on all routes
+- `Hero.tsx` renders both CTA buttons and search bar when `showSearchBar` is true (not either/or)
+- `LayoutShell.tsx` passes `logoDarkUrl` (white logo) to Navigation, `logoDarkUrl` to Footer
+- TrustBar logos require `seed-trustbar-logos.ts` after re-seeding homepage (uploads image assets to Sanity)
 
 ## Strategic Positioning (v2, March 2026)
 Core position: **"Vi hjelper norske bedrifter vinne anbud"** — not just find them.
