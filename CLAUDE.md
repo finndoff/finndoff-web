@@ -1,6 +1,6 @@
 # Finndoff Web
 
-Next.js 16 marketing site for Finndoff — Norwegian public procurement tender alert service.
+Next.js 16 marketing site for Finndoff — **den faglige anbudspartneren** for norske SMB-er i offentlige anbud.
 
 ## Stack
 - **Framework**: Next.js 16 (App Router) + TypeScript
@@ -35,6 +35,16 @@ npm run build      # Production build
 - `SectionWrapper` handles section styling: default, dark (verksted-gradient + blueprint grid), brand
 - All content is editable in Sanity Studio — components are presentation-only
 - SEO: sitemap, robots, OG images, JSON-LD schemas on all routes
+
+## Strategic Positioning (v2, March 2026)
+Core position: **"Vi hjelper norske bedrifter vinne anbud"** — not just find them.
+- **Identity**: Faglig anbudspartner (expert tender partner), NOT a software tool
+- **Differentiators**: Competence over technology, branch partnerships (MEF, NESO, Byggmesterforbundet, Arkitektbedriftene), SMB mission
+- **AI stance**: AI is the tool, not the product. Competence wins tenders.
+- **Competitors**: vs Mercell (expensive monopoly for enterprise) and Cobrief (generic AI autopilot)
+- **KPIs**: ~600 SMB customers, ~90% renewal, 4 industry associations, 835 BNOK public procurement market
+- **Tagline**: "Menneske + Maskin = Bedre anbudsresultater"
+- Source: `finndoff-marketing-agent/docs/Markedsstrategi/finndoff-strategi-v2.html`
 
 ## Environment
 Copy `.env.example` to `.env.local` and fill in Sanity credentials.
