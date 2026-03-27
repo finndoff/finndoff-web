@@ -30,24 +30,24 @@ const product = {
   title: "Innsikt",
   slug: { _type: "slug", current: "innsikt" },
   subtitle:
-    "Overvåk rammeavtaler, innkjøpsplaner og konkurrenter — vær tidlig ute med strategisk innsikt.",
+    "Forstå markedet og kom i posisjon — vær forberedt når konkurransen lyses ut.",
   description:
-    "Finndoff Innsikt gir deg strategisk forsprang med overvåkning av rammeavtaler, innkjøpsplaner, oppdragsgivere og konkurrenter — så du kan posisjonere deg før konkurransen starter.",
+    "Finndoff Innsikt gir deg strategisk forsprang. Overvåk rammeavtaler, innkjøpsplaner og konkurrenter — så du kan posisjonere deg og vinne før konkurransen starter.",
   icon: "bar-chart-2",
   price: 649,
   priceLabel: "+649 kr/mnd",
   isAddon: true,
-  seoTitle: "Innsikt — I posisjon før konkurransen starter | Finndoff",
+  seoTitle: "Innsikt — Forstå markedet og kom i posisjon | Finndoff",
   seoDescription:
-    "Overvåk rammeavtaler, innkjøpsplaner og konkurrenter. Finndoff Innsikt gir deg strategisk forsprang — fra 649 kr/mnd som tillegg til Varsling.",
+    "Kom i posisjon før konkurransen starter. Overvåk rammeavtaler, innkjøpsplaner og konkurrenter — fra 649 kr/mnd som tillegg til Varsling.",
   sections: [
     // 1. Hero
     {
       _type: "hero",
       _key: key(),
-      headline: "I posisjon før konkurransen starter",
+      headline: "Forstå markedet og kom i posisjon",
       subheadline:
-        "Overvåk rammeavtaler, innkjøpsplaner og konkurrenter – vær tidlig ute med strategisk innsikt.",
+        "Overvåk rammeavtaler, innkjøpsplaner og konkurrenter — vær forberedt når konkurransen lyses ut, og still sterkere enn de andre.",
       primaryCta: {
         text: "Prøv gratis",
         link: "https://app.finndoff.no/register",
@@ -63,9 +63,9 @@ const product = {
     {
       _type: "featureGrid",
       _key: key(),
-      title: "Fire kraftige verktøy",
+      title: "Fire veier til forsprang",
       subtitle:
-        "Strategisk innsikt som gir deg et forsprang — lenge før konkurransen lyses ut.",
+        "Strategisk innsikt som hjelper deg posisjonere deg — og vinne — lenge før konkurransen lyses ut.",
       columns: 2,
       features: [
         {
@@ -103,16 +103,16 @@ const product = {
     {
       _type: "textSection",
       _key: key(),
-      title: "Slik bruker du Innsikt strategisk",
+      title: "Slik bruker kundene våre Innsikt til å vinne",
       content: [
         ...portableText(
-          "En elektrikerbedrift i Tromsø bruker Innsikt til å overvåke rammeavtaler hos kommunen og Troms fylkeskommune. Når en avtale nærmer seg utløp, starter de forberedelsene måneder i forveien — og stiller sterkere i konkurransen."
+          "En elektrikerbedrift i Tromsø overvåker rammeavtaler hos kommunen og Troms fylkeskommune. Når en avtale nærmer seg utløp, starter de forberedelsene måneder i forveien — og stiller sterkere enn konkurrentene når det lyses ut."
         ),
         ...portableText(
-          "Et rådgivningsfirma følger innkjøpsplanene til sine viktigste kunder. De ser kommende prosjekter lenge før kunngjøring, og bruker tiden til å bygge relasjoner og forberede tilbud."
+          "Et rådgivningsfirma følger innkjøpsplanene til sine viktigste oppdragsgivere. De ser kommende prosjekter lenge før kunngjøring, bygger relasjoner og har tilbudet klart når andre først begynner å lese dokumentene."
         ),
         ...portableText(
-          "En maskinentreprenør bruker konkurrentanalysen til å forstå markedet. De ser hvem som vinner i sine områder, hvilke priser som aksepteres, og justerer sin strategi deretter."
+          "En maskinentreprenør bruker konkurrentanalysen til å forstå hvem som vinner i sine områder, hvilke priser som aksepteres og hvor det er rom for en ny aktør. Resultatet: bedre bid/no-bid-beslutninger."
         ),
       ],
     },
@@ -231,9 +231,9 @@ const product = {
     {
       _type: "ctaSection",
       _key: key(),
-      title: "Klar til å komme i posisjon?",
+      title: "Klar til å komme i posisjon — og vinne?",
       description:
-        "Legg til Innsikt og få strategisk forsprang — se rammeavtaler, innkjøpsplaner og konkurrenter før alle andre.",
+        "Legg til Innsikt og få strategisk forsprang. Se rammeavtaler, innkjøpsplaner og konkurrenter før alle andre — og still sterkere i konkurransen.",
       primaryCta: {
         text: "Start gratis prøveperiode",
         link: "https://app.finndoff.no/register",

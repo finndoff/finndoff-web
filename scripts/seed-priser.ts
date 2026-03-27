@@ -29,17 +29,17 @@ const page = {
   _type: "page",
   title: "Priser",
   slug: { _type: "slug", current: "priser" },
-  seoTitle: "Priser — Enkel og modulær prising | Finndoff",
+  seoTitle: "Priser — Invester i vinnersjanse, ikke bare varsling | Finndoff",
   seoDescription:
-    "Start med Varsling fra 829 kr/mnd og legg til Innsikt, Anbudshjelp AI eller Konsulent etter behov. Se din totalpris med vår interaktive kalkulator.",
+    "Fra 829 kr/mnd — rett under 10 000 kr/år. Bygg din anbudspakke med varsling, innsikt, AI-analyse og konsulent. Kompetanse og teknologi på ett sted.",
   sections: [
     // 1. Hero
     {
       _type: "hero",
       _key: key(),
-      headline: "Enkel og modulær prising",
+      headline: "Invester i vinnersjanse, ikke bare varsling",
       subheadline:
-        "Start med Varsling og legg til det du trenger. Ingen bindingstid, ingen skjulte kostnader.",
+        "Start med Varsling fra 829 kr/mnd — rett under 10 000 kr/år. Legg til kompetanse og verktøy etter behov. Ingen bindingstid.",
       primaryCta: {
         text: "Start gratis prøveperiode",
         link: "https://app.finndoff.no/register",
@@ -55,9 +55,9 @@ const page = {
     {
       _type: "pricingCalculator",
       _key: key(),
-      title: "Bygg din pakke",
+      title: "Bygg din anbudspakke",
       subtitle:
-        "Velg modulene som passer din bedrift og se totalprisen umiddelbart.",
+        "Velg modulene som passer din bedrift — fra varsling til fullverdig anbudspartner.",
     },
 
     // 3. PricingTable (overview)
@@ -66,14 +66,14 @@ const page = {
       _key: key(),
       title: "Alle moduler i oversikt",
       subtitle:
-        "Varsling er grunnpakken — legg til tilleggsmoduler etter behov.",
+        "Varsling er grunnpakken — bygg videre med innsikt, AI og konsulent for en fullverdig anbudspartner.",
       plans: [
         {
           _key: key(),
           name: "Varsling",
           price: 829,
           description:
-            "Grunnpakken for anbudsvarsler. Ekspertoppsett av søkeprofil, daglige varsler fra Doffin og TED.",
+            "Finn de rette anbudene med ekspertoppsett. Daglige varsler fra Doffin og TED, konfigurert av fagfolk.",
           isAddon: false,
           highlighted: true,
           features: [
@@ -92,7 +92,7 @@ const page = {
           price: 649,
           priceLabel: "+649 kr/mnd",
           description:
-            "Dypere innsikt i anbudsmarkedet med markedsanalyse, konkurrentoversikt og historiske data.",
+            "Forstå markedet og kom i posisjon. Markedsanalyse, konkurrentoversikt og strategisk innsikt.",
           isAddon: true,
           highlighted: false,
           features: [
@@ -110,7 +110,7 @@ const page = {
           price: 1499,
           priceLabel: "+1 499 kr/mnd",
           description:
-            "AI-drevet analyse av konkurransegrunnlag. Automatisk nedlasting, kvalifiseringssjekk og prosjektplan.",
+            "AI som forsterker din kompetanse. Analyse, kvalifiseringssjekk og prosjektplan — på minutter.",
           isAddon: true,
           highlighted: false,
           features: [
@@ -127,7 +127,7 @@ const page = {
           name: "Anbudskonsulent",
           priceLabel: "Etter avtale",
           description:
-            "Personlig rådgivning fra erfarne anbudskonsulenter via vår partner TendPro.",
+            "Erfarne anbudskonsulenter som hjelper deg vinne — fra strategi til ferdig tilbud.",
           isAddon: true,
           highlighted: false,
           features: [
@@ -210,9 +210,9 @@ const page = {
     {
       _type: "ctaSection",
       _key: key(),
-      title: "Klar til å komme i gang?",
+      title: "Klar til å vinne flere anbud?",
       description:
-        "Start med en gratis prøveperiode og opplev hvordan Finndoff kan hjelpe deg å finne og vinne flere anbud.",
+        "Start med en gratis prøveperiode. Med Finndoff på laget har du kompetanse, teknologi og bransjenettverk i ryggen.",
       primaryCta: {
         text: "Start gratis prøveperiode",
         link: "https://app.finndoff.no/register",

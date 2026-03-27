@@ -30,23 +30,23 @@ const product = {
   title: "Anbudskonsulent",
   slug: { _type: "slug", current: "konsulent" },
   subtitle:
-    "Vi kombinerer kraftig teknologi med erfarne fagfolk — eksperter når du trenger dem.",
+    "Din anbudspartner fra strategi til ferdig tilbud — erfarne fagfolk som hjelper deg vinne.",
   description:
-    "Finndoffs kompetansenettverk kobler deg med erfarne anbudskonsulenter som kjenner plattformen og bransjen. Fra strategi til ferdig tilbud.",
+    "Kjernen av anbudspartner-posisjonen. Finndoffs kompetansenettverk kobler deg med erfarne konsulenter som kjenner bransjen og plattformen — folk som kan anbud, ikke bare AI.",
   icon: "users",
   priceLabel: "Etter avtale",
   isAddon: true,
-  seoTitle: "Anbudskonsulent — Eksperter når du trenger dem | Finndoff",
+  seoTitle: "Anbudskonsulent — Din partner fra strategi til vinnende tilbud | Finndoff",
   seoDescription:
-    "Få hjelp av erfarne anbudskonsulenter som kjenner Finndoff-plattformen. Strategi, tilbudsskriving og prosessveiledning — fra TendPro og Din Anbudshjelp.",
+    "Erfarne anbudskonsulenter som hjelper deg vinne. Strategi, tilbudsskriving og prosessveiledning — kompetanse ingen AI kan erstatte.",
   sections: [
     // 1. Hero
     {
       _type: "hero",
       _key: key(),
-      headline: "Eksperter når du trenger dem",
+      headline: "Din anbudspartner fra strategi til tilbud",
       subheadline:
-        "Vi kombinerer kraftig teknologi med erfarne fagfolk — slik at du kan vinne flere anbud.",
+        "Kunden får ikke bare et verktøy — de får folk som kan anbud. Erfarne konsulenter som hjelper deg vinne, ikke bare levere.",
       primaryCta: {
         text: "Book gratis konsultasjon",
         link: "https://www.tendpro.no/book-et-mote",
@@ -62,13 +62,13 @@ const product = {
     {
       _type: "textSection",
       _key: key(),
-      title: "Verktøy + eksperter = bedre resultater",
+      title: "Kompetanse over teknologi",
       content: [
         ...portableText(
-          "Finndoff gir deg verktøyene for å finne og analysere anbud effektivt. Men noen ganger trenger du mer enn teknologi — du trenger erfarne fagfolk som kan hjelpe deg med strategi, tilbudsskriving og prosessforståelse."
+          "Vi selger ikke software — vi selger vinnersjanse. Teknologi er verktøyet, men det er kompetanse som vinner anbud. Når du trenger noen som forstår prosessen, kravene og strategien — da trenger du en anbudspartner."
         ),
         ...portableText(
-          "Derfor har vi bygget et kompetansenettverk med håndplukkede partnere som kjenner Finndoff-plattformen og bransjen din. De kan hjelpe deg fra første vurdering til ferdig innlevert tilbud."
+          "Finndoffs kompetansenettverk består av håndplukkede partnere som kjenner bransjen, plattformen og offentlige anskaffelser fra innsiden. De hjelper deg fra første vurdering til ferdig innlevert tilbud — slik at du konkurrerer på faglig kvalitet, ikke bare pris."
         ),
       ],
     },
@@ -147,9 +147,9 @@ const product = {
     {
       _type: "ctaSection",
       _key: key(),
-      title: "Trenger du veiledning?",
+      title: "Klar til å vinne ditt neste anbud?",
       description:
-        "Book en gratis konsultasjon med TendPro, eller ta kontakt med oss for å finne riktig hjelp for din bedrift.",
+        "Book en gratis konsultasjon med TendPro og få en faglig partner på laget — fra strategi til ferdig tilbud.",
       primaryCta: {
         text: "Book gratis konsultasjon",
         link: "https://www.tendpro.no/book-et-mote",

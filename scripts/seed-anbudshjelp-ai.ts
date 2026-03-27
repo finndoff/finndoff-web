@@ -30,24 +30,24 @@ const product = {
   title: "Anbudshjelp AI",
   slug: { _type: "slug", current: "anbudshjelp-ai" },
   subtitle:
-    "AI-drevet analyse av konkurransegrunnlag — spar tid og ta bedre beslutninger.",
+    "AI som forsterker din kompetanse — fra dokumentanalyse til prosjektplan på minutter.",
   description:
-    "Anbudshjelp AI analyserer konkurransegrunnlag automatisk, sjekker kvalifikasjonskrav og lager en prosjektplan — på minutter, ikke timer.",
+    "Anbudshjelp AI er verktøyet, ikke produktet. Den analyserer konkurransegrunnlag, sjekker kvalifikasjonskrav og lager en prosjektplan — slik at du kan bruke tiden på det som vinner anbud: faglig kvalitet.",
   icon: "bot",
   price: 1499,
   priceLabel: "+1 499 kr/mnd",
   isAddon: true,
-  seoTitle: "Anbudshjelp AI — Fra timer til minutter | Finndoff",
+  seoTitle: "Anbudshjelp AI — AI som forsterker din kompetanse | Finndoff",
   seoDescription:
-    "AI-drevet analyse av konkurransegrunnlag. Automatisk nedlasting, kvalifiseringssjekk, AI-analyse og prosjektplan — spar tid og vinn flere anbud.",
+    "AI-analyse av konkurransegrunnlag, kvalifiseringssjekk og prosjektplan — på minutter. AI er verktøyet, din kompetanse er det som vinner.",
   sections: [
     // 1. Hero
     {
       _type: "hero",
       _key: key(),
-      headline: "Fra timer til minutter",
+      headline: "AI som forsterker din kompetanse",
       subheadline:
-        "AI-drevet analyse av konkurransegrunnlag — spar tid og ta bedre beslutninger.",
+        "Fra timer til minutter — AI analyserer konkurransegrunnlaget slik at du kan fokusere på det som vinner: faglig kvalitet i tilbudet.",
       primaryCta: {
         text: "Prøv gratis",
         link: "https://app.finndoff.no/register",
@@ -63,9 +63,9 @@ const product = {
     {
       _type: "comparisonTable",
       _key: key(),
-      title: "Fra timer med usikkerhet til minutter med kontroll",
+      title: "AI + fagkompetanse = bedre beslutninger",
       subtitle:
-        "Finndoff gjør anbud enklere — få oversikt og trygghet i hver anbudsprosess",
+        "AI er verktøyet, ikke produktet. Se hvordan AI-analyse kombinert med din kompetanse gir bedre resultater.",
       columns: [
         { _key: key(), name: "Uten AI", highlighted: false },
         { _key: key(), name: "Med Finndoff AI", highlighted: true },
@@ -134,8 +134,8 @@ const product = {
     {
       _type: "featureGrid",
       _key: key(),
-      title: "Seks kraftige funksjoner",
-      subtitle: "Alt du trenger for å jobbe smartere med anbud",
+      title: "Seks funksjoner som forsterker din kompetanse",
+      subtitle: "AI gjør deg raskere — din fagkunnskap gjør deg til en vinner",
       columns: 3,
       features: [
         {
@@ -189,7 +189,7 @@ const product = {
       _key: key(),
       title: "Slik fungerer det",
       subtitle:
-        "Fra varsel til ferdig prosjektplan — Anbudshjelp AI guider deg gjennom hele prosessen.",
+        "Fra varsel til ferdig prosjektplan — AI gjør grunnarbeidet slik at du kan fokusere på strategi og faglig kvalitet.",
       steps: [
         {
           _key: key(),
@@ -315,9 +315,9 @@ const product = {
     {
       _type: "ctaSection",
       _key: key(),
-      title: "Klar til å jobbe smartere med anbud?",
+      title: "Klar til å la AI forsterke din kompetanse?",
       description:
-        "Prøv Anbudshjelp AI gratis og opplev forskjellen. Fra timer til minutter — på ditt første anbud.",
+        "Prøv Anbudshjelp AI gratis. Fra timer til minutter på analyse — slik at du kan bruke tiden på det som faktisk vinner anbud.",
       primaryCta: {
         text: "Start gratis prøveperiode",
         link: "https://app.finndoff.no/register",

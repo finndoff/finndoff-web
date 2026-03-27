@@ -32,9 +32,9 @@ const homepage = {
   _type: "page",
   title: "Hjem",
   slug: { _type: "slug", current: "hjem" },
-  seoTitle: "Finndoff — Finn og vinn offentlige anbud",
+  seoTitle: "Finndoff — Vi hjelper norske bedrifter vinne anbud",
   seoDescription:
-    "Over 1 000 norske bedrifter bruker Finndoff for å aldri gå glipp av relevante anbud. Ekspertoppsett, AI-verktøy og anbudshjelp — alt under samme tak.",
+    "Finndoff er den faglige anbudspartneren for norske SMB-er. Kompetanse, teknologi og bransjenettverk — slik at du kan konkurrere med de store og vinne.",
   sections: [
 
     // ── 1. HERO ───────────────────────────────────────────────────────────
@@ -43,23 +43,22 @@ const homepage = {
     {
       _type: "hero",
       _key: key(),
-      headline: "Finn og vinn ditt neste offentlige anbud",
+      headline: "Vi hjelper norske bedrifter vinne anbud",
       subheadline:
-        "Over 1 000 norske bedrifter bruker Finndoff for å aldri gå glipp av relevante anbud. Vi setter opp alt for deg — ingen selvbetjening.",
+        "Ikke bare finne dem. Ikke bare varsle om dem. Vinne dem. Finndoff kombinerer fagkompetanse, teknologi og bransjenettverk slik at små og mellomstore bedrifter kan konkurrere — og slå — de store.",
       showSearchBar: false,
       primaryCta: {
-        text: "Start gratis prøveperiode",
+        text: "Prøv gratis — vi setter opp alt",
         link: "https://finndoff.no/signup",
       },
       secondaryCta: {
         text: "Se hvordan det fungerer",
         link: "#slik-fungerer-det",
       },
-      // Endring #1: stats
       stats: [
-        { _key: key(), value: "1 000+", label: "norske bedrifter" },
-        { _key: key(), value: "4+ timer", label: "spart per uke" },
-        { _key: key(), value: "100 %", label: "ekspertoppsett" },
+        { _key: key(), value: "~600", label: "SMB-kunder" },
+        { _key: key(), value: "~90 %", label: "fornyelsesrate" },
+        { _key: key(), value: "4", label: "bransjeforeninger" },
       ],
       // Endring #5: laptop device frame med app-screenshot
       image: {
@@ -75,7 +74,7 @@ const homepage = {
     {
       _type: "trustBar",
       _key: key(),
-      title: "Betrodd av over 1 000 bedrifter i Norge",
+      title: "Betrodd av hundrevis av norske bedrifter og bransjeforeninger",
       style: "scrolling",
       logos: [
         "MEF",
@@ -101,16 +100,16 @@ const homepage = {
     {
       _type: "featureGrid",
       _key: key(),
-      title: "Alt du trenger for å vinne anbud",
+      title: "Menneske + Maskin = Bedre anbudsresultater",
       subtitle:
-        "Bygg din egen pakke — start med varsling og legg til det du trenger.",
+        "Vi selger ikke software — vi selger vinnersjanse. Teknologi er verktøyet, kompetanse er produktet.",
       columns: 4,
       features: [
         {
           _key: key(),
           title: "Varsling",
           description:
-            "Få relevante anbudsvarsler rett i innboksen. Vi setter opp søkeprofilen din med ekspertise — ikke selvbetjening.",
+            "Finn de rette anbudene, uten støy. Vi setter opp søkeprofilen din med ekspertise fra hundrevis av bedrifter i din bransje.",
           icon: "bell",
           link: "/varsling",
         },
@@ -118,7 +117,7 @@ const homepage = {
           _key: key(),
           title: "Innsikt",
           description:
-            "Se hvem som vinner anbud i din bransje, analyser konkurrenter og finn muligheter andre overser.",
+            "Forstå markedet og kom i posisjon. Se hvem som vinner, analyser konkurrenter og finn muligheter før alle andre.",
           icon: "bar-chart-2",
           link: "/innsikt",
         },
@@ -126,7 +125,7 @@ const homepage = {
           _key: key(),
           title: "Anbudshjelp AI",
           description:
-            "AI-verktøy som hjelper deg å lese dokumenter, forstå krav og skrive bedre tilbud — raskere.",
+            "AI som forsterker din kompetanse — les dokumenter, forstå krav og ta bedre bid/no-bid-beslutninger på minutter.",
           icon: "bot",
           link: "/anbudshjelp-ai",
         },
@@ -134,7 +133,7 @@ const homepage = {
           _key: key(),
           title: "Konsulent",
           description:
-            "Trenger du ekstra hjelp? Våre anbudskonsulenter hjelper deg med hele tilbudsprosessen.",
+            "Erfarne anbudskonsulenter som hjelper deg fra strategi til ferdig tilbud — din partner hele veien.",
           icon: "users",
           link: "/konsulent",
         },
@@ -146,11 +145,11 @@ const homepage = {
     {
       _type: "ctaSection",
       _key: key(),
-      title: "Klar til å aldri gå glipp av et anbud igjen?",
+      title: "Klar til å vinne flere anbud?",
       description:
-        "Start med en gratis prøveperiode. Ingen bindingstid, ingen kredittkort.",
+        "Med Finndoff på laget leverer du anbudet i tide, og vinnersjansen din er høyere. Start med en gratis prøveperiode.",
       primaryCta: {
-        text: "Prøv gratis i dag",
+        text: "Prøv gratis — vi setter opp alt",
         link: "https://finndoff.no/signup",
       },
       secondaryCta: {
@@ -167,7 +166,7 @@ const homepage = {
       _key: key(),
       title: "Vi gjør jobben — du vinner anbud",
       subtitle:
-        "I motsetning til selvbetjeningsverktøy setter vi opp alt for deg, basert på erfaring fra over 1 000 bedrifter.",
+        "I motsetning til selvbetjeningsverktøy og generisk AI setter vi opp alt for deg, basert på fagkompetanse og erfaring fra hundrevis av bedrifter.",
       steps: [
         {
           _key: key(),
@@ -218,27 +217,27 @@ const homepage = {
     },
 
     // ── 6. COMPARISON TABLE ───────────────────────────────────────────────
-    // Endring #8: sammenligning vs Doffin og manuelt søk
+    // Konkurransekart fra strategi v2
     {
       _type: "comparisonTable",
       _key: key(),
-      title: "Finndoff vs. å gjøre det selv",
+      title: "Hvorfor Finndoff vinner",
       subtitle:
-        "Doffin er gratis — men tid og kompetanse koster penger. Se hva du faktisk får.",
+        "I et marked delt mellom en dyr gigant og rene AI-utfordrere tar Finndoff posisjonen som den faglige anbudspartneren.",
       columns: [
         { _key: key(), name: "Finndoff", highlighted: true },
-        { _key: key(), name: "Doffin (gratis)", highlighted: false },
-        { _key: key(), name: "Manuelt søk", highlighted: false },
+        { _key: key(), name: "Mercell", highlighted: false },
+        { _key: key(), name: "Cobrief", highlighted: false },
       ],
       rows: [
-        { _key: key(), feature: "Automatiske varsler på e-post", values: ["true", "false", "false"] },
-        { _key: key(), feature: "Ekspertoppsatt søkeprofil", values: ["true", "false", "false"] },
-        { _key: key(), feature: "AI-analyse av konkurransegrunnlag", values: ["true", "false", "false"] },
-        { _key: key(), feature: "Markedsinnsikt og konkurranseanalyse", values: ["true", "false", "false"] },
-        { _key: key(), feature: "Anbudshjelp fra konsulent", values: ["true", "false", "false"] },
-        { _key: key(), feature: "Tid brukt per uke", values: ["~30 min", "5–8 timer", "8+ timer"] },
-        { _key: key(), feature: "Bransjepartner-rabatter", values: ["true", "false", "false"] },
-        { _key: key(), feature: "Onboarding og løpende støtte", values: ["true", "false", "false"] },
+        { _key: key(), feature: "Posisjon", values: ["Faglig anbudspartner", "Infrastruktur-monopolet", "AI-autopiloten"] },
+        { _key: key(), feature: "Ekspertoppsett av søkeprofil", values: ["true", "false", "false"] },
+        { _key: key(), feature: "Bransjepartnerskaper (MEF, NESO m.fl.)", values: ["true", "false", "false"] },
+        { _key: key(), feature: "Anbudskonsulenter", values: ["true", "false", "Kun AI"] },
+        { _key: key(), feature: "AI-analyse av dokumenter", values: ["true", "Begrenset", "true"] },
+        { _key: key(), feature: "Markedsinnsikt", values: ["true", "true", "Tillegg"] },
+        { _key: key(), feature: "Pris fra", values: ["829 kr/mnd", "1 000+ kr/mnd", "Gratis (begrenset)"] },
+        { _key: key(), feature: "Bygget for", values: ["Norske SMB-er", "Enterprise", "Alle med AI"] },
       ],
     },
 
@@ -248,7 +247,7 @@ const homepage = {
       _type: "testimonialGrid",
       _key: key(),
       title: "Hva kundene våre sier",
-      subtitle: "Over 1 000 norske bedrifter stoler på Finndoff for å vinne offentlige anbud.",
+      subtitle: "Hundrevis av norske bedrifter stoler på Finndoff som sin anbudspartner.",
       items: [
         {
           _key: key(),
@@ -282,9 +281,9 @@ const homepage = {
     {
       _type: "featureGrid",
       _key: key(),
-      title: "Offisielle bransjepartnere",
+      title: "Ingen konkurrent har vår distribusjon",
       subtitle:
-        "Finndoff er offisiell samarbeidspartner med de ledende bransjeorganisasjonene i norsk bygg, anlegg og fagarbeid. Medlemmer får skreddersydde profiler og rabatt.",
+        "MEF, Arkitektbedriftene, Byggmesterforbundet og NESO — fire bransjeforeninger med over 1 000 uaktiverte potensielle kunder. Medlemmer får skreddersydde profiler og rabatt.",
       columns: 3,
       features: [
         {
@@ -319,33 +318,33 @@ const homepage = {
     {
       _type: "featureGrid",
       _key: key(),
-      title: "Trygt og enkelt",
-      subtitle: "Vi er et norsk selskap som tar personvern på alvor.",
+      title: "Derfor velger SMB-er Finndoff",
+      subtitle: "Allerede validert — ~600 kunder og ~90 % fornyelse beviser etterspørselen.",
       columns: 4,
       features: [
         {
           _key: key(),
-          title: "Norsk selskap",
-          description: "Etablert i 2021. Kontor i Oslo og Narvik. Alle data lagres innenfor EØS.",
-          icon: "flag",
+          title: "Kompetanse over teknologi",
+          description: "Du får ikke bare et verktøy — du får folk som kan anbud. Vi selger vinnersjanse, ikke lisenser.",
+          icon: "award",
         },
         {
           _key: key(),
-          title: "GDPR-sertifisert",
-          description: "Vi behandler persondata i henhold til GDPR og norsk personvernlovgivning.",
+          title: "Politisk medvind",
+          description: "Stortinget og regjeringen vil ha flere SMB-er inn i offentlige anbud. Finndoff er svaret.",
+          icon: "trending-up",
+        },
+        {
+          _key: key(),
+          title: "Norsk og trygt",
+          description: "Etablert i 2021. Kontor i Oslo og Narvik. GDPR-sertifisert, kryptert og uten bindingstid.",
           icon: "shield-check",
         },
         {
           _key: key(),
-          title: "Kryptert kommunikasjon",
-          description: "All kommunikasjon mellom deg og Finndoff er kryptert med TLS/SSL.",
-          icon: "lock",
-        },
-        {
-          _key: key(),
-          title: "Ingen bindingstid",
-          description: "Prøv gratis, og si opp når du vil. Ingen skjulte gebyrer eller bindingstid.",
-          icon: "circle-check",
+          title: "~90 % fornyelse",
+          description: "Nesten alle kundene våre velger å fortsette. Det er den beste kvalitetsgarantien vi kan gi.",
+          icon: "heart",
         },
       ],
     },
@@ -354,11 +353,11 @@ const homepage = {
     {
       _type: "ctaSection",
       _key: key(),
-      title: "Klar til å finne ditt neste anbud?",
+      title: "Klar til å vinne ditt neste anbud?",
       description:
-        "Start med en gratis prøveperiode og se hvilke anbud som passer din bedrift.",
+        "Med Finndoff på laget har du kompetanse, teknologi og bransjenettverk i ryggen. Start med en gratis prøveperiode.",
       primaryCta: {
-        text: "Start gratis prøveperiode",
+        text: "Prøv gratis — vi setter opp alt",
         link: "https://finndoff.no/signup",
       },
       secondaryCta: {
@@ -378,7 +377,7 @@ const homepage = {
           _key: key(),
           question: "Hva er Finndoff?",
           answer: portableText(
-            "Finndoff er en norsk tjeneste som hjelper bedrifter å finne og vinne offentlige anbud. Vi kombinerer ekspertise med AI-verktøy for å gi deg relevante anbudsvarsler, markedsinnsikt og hjelp til å skrive tilbud."
+            "Finndoff er den faglige anbudspartneren for norske SMB-er. Vi kombinerer fagkompetanse, AI-teknologi og bransjenettverk for å hjelpe deg vinne offentlige anbud — ikke bare finne dem."
           ),
         },
         {
@@ -397,30 +396,30 @@ const homepage = {
         },
         {
           _key: key(),
-          question: "Hva er forskjellen fra Doffin?",
+          question: "Hva gjør Finndoff annerledes enn Mercell og Cobrief?",
           answer: portableText(
-            "Doffin er en offentlig database der du selv må søke og filtrere manuelt — noe som tar 5–8 timer i uken. Finndoff setter opp en ekspertkonfigurert søkeprofil for din bedrift, sender varsler automatisk, og gir deg AI-verktøy for å analysere og besvare anbud raskere. Du bruker 30 minutter i uken i stedet."
+            "Mercell er den dyre giganten laget for enterprise. Cobrief er en AI-autopilot uten faglig dybde. Finndoff er den faglige anbudspartneren — vi kombinerer ekspertoppsett, AI-verktøy, anbudskonsulenter og bransjeforeningspartnerskap. Ingen andre har denne kombinasjonen."
           ),
         },
         {
           _key: key(),
           question: "Kan jeg prøve gratis?",
           answer: portableText(
-            "Ja! Vi tilbyr en gratis prøveperiode der du kan teste varsling og se hvilke anbud som er relevante for din bedrift. Ingen bindingstid, ingen kredittkort."
+            "Ja! Vi tilbyr en gratis prøveperiode der vi setter opp en ekspertkonfigurert søkeprofil for din bedrift. Ingen bindingstid, ingen kredittkort — og vi gjør alt oppsettet for deg."
           ),
         },
         {
           _key: key(),
           question: "Trenger jeg å sette opp noe selv?",
           answer: portableText(
-            "Nei. I motsetning til andre tjenester setter våre eksperter opp alt for deg. Vi konfigurerer søkeprofilen basert på erfaring fra over 1 000 bedrifter i din bransje. Du trenger bare 30 minutter til et oppstartsmøte."
+            "Nei. I motsetning til selvbetjeningsverktøy og generisk AI setter våre eksperter opp alt for deg. Vi konfigurerer søkeprofilen basert på erfaring fra hundrevis av bedrifter i din bransje. Du trenger bare 30 minutter til et oppstartsmøte."
           ),
         },
         {
           _key: key(),
           question: "Er Finndoff kun for bygg og anlegg?",
           answer: portableText(
-            "Nei — Finndoff brukes av bedrifter i mange bransjer, fra kjøttindustri og helsesektoren til IT og rådgivning. Vi har spesialkompetanse på bygg, anlegg og tekniske fag, men kan sette opp profiler for alle som leverer til offentlig sektor."
+            "Nei — Finndoff brukes av bedrifter i mange bransjer, fra kjøttindustri og helsesektoren til IT og rådgivning. Bygg og anlegg er vårt kjernesegment med sterke bransjeforeningspartnerskap (MEF, NESO, Byggmesterforbundet), men vi hjelper alle som leverer til offentlig sektor."
           ),
         },
       ],

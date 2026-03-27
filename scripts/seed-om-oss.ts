@@ -135,17 +135,17 @@ const page = {
   _type: "page",
   title: "Om oss",
   slug: { _type: "slug", current: "om-oss" },
-  seoTitle: "Om oss — Menneske + Maskin | Finndoff",
+  seoTitle: "Om oss — Den faglige anbudspartneren | Finndoff",
   seoDescription:
-    "Møt teamet bak Finndoff. Vi kombinerer teknologi og ekspertise for å hjelpe norske bedrifter vinne flere anbud.",
+    "Vi gjør det mulig for norske bedrifter å vinne offentlige anbud. Møt teamet bak Finndoff — kompetanse, teknologi og bransjenettverk.",
   sections: [
     // 1. Hero
     {
       _type: "hero",
       _key: key(),
-      headline: "Menneske + Maskin = Vinnende Anbud",
+      headline: "Vi gjør det mulig for norske bedrifter å vinne anbud",
       subheadline:
-        "Vi bygger teknologi som gjør det enklere for norske bedrifter å finne, forstå og vinne offentlige anbud.",
+        "Ikke bare finne dem. Ikke bare varsle om dem. Vinne dem. Menneske + maskin — kompetanse, teknologi og bransjenettverk på ett sted.",
       primaryCta: {
         text: "Prøv gratis",
         link: "https://app.finndoff.no/register",
@@ -161,11 +161,11 @@ const page = {
     {
       _type: "textSection",
       _key: key(),
-      title: "Vår visjon",
+      title: "Vår misjon",
       content: portableTextMulti([
-        "Finndoff ble startet i 2021 med en enkel idé: offentlige anbud bør være tilgjengelige for alle — ikke bare de største selskapene med egne anbudsavdelinger.",
-        "Vi kombinerer smart teknologi med ekspertise fra erfarne anbudskonsulenter. Resultatet er en tjeneste som gir små og mellomstore bedrifter verktøyene de trenger for å konkurrere på like vilkår.",
-        "I dag hjelper vi hundrevis av bedrifter i bygg, anlegg og flere bransjer med å finne relevante anbud, forstå konkurransegrunnlag og levere vinnende tilbud.",
+        "Vi gjør det mulig for norske bedrifter å vinne offentlige anbud. Ikke bare finne dem — vinne dem.",
+        "I et marked delt mellom en dyr gigant og rene AI-utfordrere tar Finndoff posisjonen som den faglige anbudspartneren. Vi selger vinnersjanse, ikke lisenser. AI er verktøyet, ikke produktet. Tillit før hype.",
+        "Med ~600 SMB-kunder og ~90 % fornyelsesrate har vi bevist at det fungerer. Og med fire bransjeforeningspartnerskap (MEF, Byggmesterforbundet, NESO, Arkitektbedriftene) har vi en distribusjon ingen konkurrent kan kopiere.",
       ]),
     },
 
@@ -202,9 +202,9 @@ const page = {
       title: "Vår historie",
       content: portableTextMulti([
         "Finndoff ble til under pandemien i 2021, da et team fra Vivende bestemte seg for å løse et problem de hadde sett på nært hold: offentlige anbud var utilgjengelige for de bedriftene som trengte dem mest.",
-        "Det startet ikke fordi det var lønnsomt, men fordi det var riktig. Mange små og mellomstore bedrifter gikk glipp av relevante oppdrag — ikke fordi de manglet kompetanse, men fordi de manglet verktøy og innsikt.",
-        "Fra den spede starten med enkel anbudsovervåking har Finndoff vokst til en komplett plattform med AI-analyse, ekspertrådgivning og et nettverk av bransjeorganisasjoner som MEF, Byggmesterforbundet og NESO.",
-        "Vår signaturfargen — teal — er bevisst valgt for å skille oss fra konkurrentenes blått og grått. Vi tror at offentlige anskaffelser fortjener en friskere tilnærming.",
+        "Det startet ikke fordi det var lønnsomt, men fordi det var riktig. Norge har Nordens laveste SMB-deltakelse i offentlige anbud. Stortinget og regjeringen vil endre dette — og Finndoff er svaret.",
+        "Fra enkel anbudsovervåking har vi vokst til en komplett anbudspartner — med AI-analyse, ekspertrådgivning og et nettverk av bransjeorganisasjoner som ingen konkurrent kan matche.",
+        "Vi konkurrerer ikke på pris — vi konkurrerer på utfall. Våre ~600 kunder betaler ikke for varsler. De investerer i vinnersjanse.",
       ]),
     },
 
@@ -244,9 +244,9 @@ const page = {
     {
       _type: "ctaSection",
       _key: key(),
-      title: "Klar til å begynne?",
+      title: "Klar til å få Finndoff på laget?",
       description:
-        "Prøv Finndoff gratis og opplev hvordan vi kan hjelpe deg å finne og vinne flere anbud.",
+        "Prøv gratis og opplev forskjellen med en faglig anbudspartner — kompetanse, teknologi og bransjenettverk i ryggen.",
       primaryCta: {
         text: "Start gratis prøveperiode",
         link: "https://app.finndoff.no/register",

@@ -15,19 +15,19 @@ const client = createClient({
 
 const pageMetadata: Record<string, { seoTitle: string; seoDescription: string }> = {
   "page-hjem": {
-    seoTitle: "Finn og vinn offentlige anbud",
+    seoTitle: "Finndoff — Vi hjelper norske bedrifter vinne anbud",
     seoDescription:
-      "Finndoff hjelper norske bedrifter med å finne, forstå og vinne offentlige anbud. Varsling, innsikt, AI-analyse og ekspertrådgivning på én plattform.",
+      "Den faglige anbudspartneren for norske SMB-er. Kompetanse, teknologi og bransjenettverk — slik at du kan konkurrere med de store og vinne.",
   },
   "page-priser": {
-    seoTitle: "Priser — Modulær prising fra 829 kr/mnd",
+    seoTitle: "Priser — Invester i vinnersjanse fra 829 kr/mnd",
     seoDescription:
-      "Start med anbudsvarsling for 829 kr/mnd. Legg til Innsikt og Anbudshjelp AI når du er klar. Ingen binding, 60 dagers åpent kjøp.",
+      "Fra 829 kr/mnd — rett under 10 000 kr/år. Bygg din anbudspakke med varsling, innsikt, AI-analyse og konsulent. Ingen bindingstid.",
   },
   "page-om-oss": {
-    seoTitle: "Om oss — Teamet bak Finndoff",
+    seoTitle: "Om oss — Den faglige anbudspartneren | Finndoff",
     seoDescription:
-      "Startet som en anbuds-app under pandemien. I dag en totalløsning bygget av IT-folk og bransjeveteraner som kombinerer teknologi med anbudsfaglig innsikt.",
+      "Vi gjør det mulig for norske bedrifter å vinne offentlige anbud. Kompetanse, teknologi og bransjenettverk — møt teamet bak Finndoff.",
   },
 };
 
@@ -35,24 +35,24 @@ const pageMetadata: Record<string, { seoTitle: string; seoDescription: string }>
 
 const productMetadata: Record<string, { seoTitle: string; seoDescription: string }> = {
   "product-varsling": {
-    seoTitle: "Anbudsvarsling — Treffsikre varsler fra 829 kr/mnd",
+    seoTitle: "Anbudsvarsling — Finn de rette anbudene med ekspertoppsett",
     seoDescription:
-      "Få varsel om relevante anbud basert på CPV-koder, nøkkelord og geografi. Personlig onboarding og support. 24/7 automatisk overvåking av Doffin.",
+      "Finn de rette anbudene uten støy. Ekspertoppsett basert på CPV-koder, nøkkelord og geografi — vi gjør jobben slik at du kan fokusere på å vinne.",
   },
   "product-innsikt": {
-    seoTitle: "Innsikt — Rammeavtaler og konkurrentanalyse",
+    seoTitle: "Innsikt — Forstå markedet og kom i posisjon",
     seoDescription:
-      "Søk i rammeavtaler, 300+ offentlige innkjøpsplaner og konkurrentdata. Se hvem som vinner anbud i ditt marked. Tillegg fra 649 kr/mnd.",
+      "Kom i posisjon før konkurransen starter. Overvåk rammeavtaler, innkjøpsplaner og konkurrenter — strategisk forsprang fra 649 kr/mnd.",
   },
   "product-anbudshjelp-ai": {
-    seoTitle: "Anbudshjelp AI — Spar 80% tid på anbudsvurdering",
+    seoTitle: "Anbudshjelp AI — AI som forsterker din kompetanse",
     seoDescription:
-      "AI-analyse av kvalifikasjonskrav, dokumentoppsummering og tilbudsbibliotek. Bygg anbudsberedskap med dokumenter, CV-er og referanseprosjekter.",
+      "AI-analyse av konkurransegrunnlag, kvalifiseringssjekk og prosjektplan — på minutter. AI er verktøyet, din kompetanse er det som vinner.",
   },
   "product-konsulent": {
-    seoTitle: "Anbudskonsulent — Ekspert hjelp når du trenger det",
+    seoTitle: "Anbudskonsulent — Din partner fra strategi til vinnende tilbud",
     seoDescription:
-      "Erfarne anbudskonsulenter på for hire-modell. Fleksibel støtte uten faste kostnader, perfekt for viktige anbud. Levert via partnernettverket TendPro.",
+      "Erfarne anbudskonsulenter som hjelper deg vinne. Strategi, tilbudsskriving og prosessveiledning — kompetanse ingen AI kan erstatte.",
   },
 };
 
@@ -60,19 +60,19 @@ const productMetadata: Record<string, { seoTitle: string; seoDescription: string
 
 const blogMetadata: Record<string, { seoTitle: string; seoDescription: string }> = {
   "blog-komme-i-gang-anbud": {
-    seoTitle: "Slik kommer du i gang med offentlige anbud",
+    seoTitle: "Slik vinner du ditt første offentlige anbud",
     seoDescription:
-      "Alt du trenger å vite for å finne og delta i offentlige anbudskonkurranser. Steg-for-steg guide for bedrifter som er nye i anbudsmarkedet.",
+      "Alt du trenger å vite for å finne og vinne offentlige anbud. Steg-for-steg guide fra Finndoffs anbudseksperter.",
   },
   "blog-5-tips-varsling": {
-    seoTitle: "5 tips for å vinne flere anbud med varsling",
+    seoTitle: "5 tips for å vinne flere anbud med riktig varsling",
     seoDescription:
-      "Lær hvordan du setter opp treffsikre anbudsvarsler med riktige CPV-koder, nøkkelord og geografiske filtre. Praktiske tips fra Finndoff-teamet.",
+      "Lær hvordan ekspertoppsett av anbudsvarsler gir deg de rette anbudene. Praktiske tips fra Finndoffs fagfolk.",
   },
   "blog-lansering-anbudshjelp-ai": {
-    seoTitle: "Vi lanserer Anbudshjelp AI",
+    seoTitle: "Anbudshjelp AI — AI som forsterker din kompetanse",
     seoDescription:
-      "Finndoff lanserer AI-drevet anbudsanalyse. Se hvordan kunstig intelligens hjelper deg med å forstå kvalifikasjonskrav og spare tid på anbudsvurdering.",
+      "Finndoff lanserer AI-drevet anbudsanalyse. AI er verktøyet — din fagkompetanse er det som vinner.",
   },
 };
 

@@ -30,24 +30,24 @@ const product = {
   title: "Varsling",
   slug: { _type: "slug", current: "varsling" },
   subtitle:
-    "Treffsikker varsling som sparer deg tid — få kun relevante anbud direkte i innboksen.",
+    "Finn de rette anbudene — vi gjør jobben for deg, basert på fagkompetanse fra hundrevis av bedrifter.",
   description:
-    "Få kun relevante anbud direkte i innboksen – uten støy og tidkrevende søk. Finndoff Varsling bruker CPV-koder, nøkkelord og geografiske filtre for å levere presise anbudsvarslinger.",
+    "Finn de rette anbudene, uten støy. Finndoff Varsling kombinerer CPV-koder, nøkkelord og geografiske filtre med ekspertoppsett — så du bruker tid på å vinne anbud, ikke lete etter dem.",
   icon: "bell",
   price: 829,
   priceLabel: "829 kr/mnd",
   isAddon: false,
-  seoTitle: "Anbudsvarsling — Treffsikker varsling som sparer deg tid | Finndoff",
+  seoTitle: "Anbudsvarsling — Finn de rette anbudene med ekspertoppsett | Finndoff",
   seoDescription:
-    "Få kun relevante anbud direkte i innboksen. CPV-koder, nøkkelord, geografiske filtre og ekspertoppsett — prøv Finndoff Varsling fra 829 kr/mnd.",
+    "Finn de rette anbudene uten støy. Ekspertoppsett, CPV-koder, nøkkelord og geografiske filtre — vi gjør jobben slik at du kan fokusere på å vinne.",
   sections: [
     // 1. Hero
     {
       _type: "hero",
       _key: key(),
-      headline: "Treffsikker varsling som sparer deg tid",
+      headline: "Finn de rette anbudene — vi gjør jobben for deg",
       subheadline:
-        "Få kun relevante anbud direkte i innboksen – uten støy og tidkrevende søk.",
+        "Ekspertoppsett basert på fagkompetanse fra hundrevis av bedrifter i din bransje. Ikke selvbetjening — vi konfigurerer alt.",
       primaryCta: {
         text: "Prøv gratis",
         link: "https://app.finndoff.no/register",
@@ -64,7 +64,7 @@ const product = {
       _type: "featureGrid",
       _key: key(),
       title: "Nøkkelfunksjoner",
-      subtitle: "Alt du trenger for å finne de riktige anbudene — uten å bruke timer på søk.",
+      subtitle: "Alt du trenger for å finne de rette anbudene — satt opp av eksperter, ikke deg selv.",
       columns: 3,
       features: [
         {
@@ -118,7 +118,7 @@ const product = {
       _key: key(),
       title: "Slik kommer du i gang",
       subtitle:
-        "Fra oppstart til optimalisert varsling — vi hjelper deg hele veien.",
+        "Fra oppstart til optimalisert varsling — din anbudspartner hele veien.",
       steps: [
         {
           _key: key(),
@@ -204,9 +204,9 @@ const product = {
         },
         {
           _key: key(),
-          question: "Hvordan skiller Finndoff seg fra gratistjenester?",
+          question: "Hvordan skiller Finndoff seg fra Mercell og Cobrief?",
           answer: portableText(
-            "Finndoff tilbyr ekspertoppsett av varslingsprofiler, avanserte filtre, automatisk kommunegjenkjenning og løpende support. Du får en dedikert rådgiver som hjelper deg å finjustere profilene — ikke bare et selvbetjeningsverktøy."
+            "Mercell er dyrt og bygget for enterprise. Cobrief gir deg gratis AI-varsling uten faglig dybde. Finndoff gir deg ekspertoppsett av varslingsprofiler, avanserte filtre, automatisk kommunegjenkjenning og løpende support fra en dedikert rådgiver — en faglig partner, ikke bare et verktøy."
           ),
         },
         {
@@ -230,9 +230,9 @@ const product = {
     {
       _type: "ctaSection",
       _key: key(),
-      title: "Prøv markedets beste anbudsvarsling",
+      title: "Klar til å finne de rette anbudene?",
       description:
-        "Start med en uforpliktende prøveperiode — vi setter opp alt for deg og hjelper deg hele veien.",
+        "Start med en uforpliktende prøveperiode — vi setter opp alt for deg med ekspertise fra hundrevis av bedrifter.",
       primaryCta: {
         text: "Start gratis prøveperiode",
         link: "https://app.finndoff.no/register",

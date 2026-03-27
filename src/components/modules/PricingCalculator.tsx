@@ -21,7 +21,7 @@ const modules: Module[] = [
     name: 'Varsling',
     price: 829,
     priceLabel: '829 kr/mnd',
-    description: 'Grunnpakken — aldri gå glipp av relevante anbud.',
+    description: 'Grunnpakken — finn de rette anbudene med ekspertoppsett.',
     alwaysIncluded: true,
     features: [
       'Daglige anbudsvarsler tilpasset din bedrift',
@@ -35,7 +35,7 @@ const modules: Module[] = [
     name: 'Innsikt',
     price: 649,
     priceLabel: '+649 kr/mnd',
-    description: 'Dypere innsikt i anbudsmarkedet.',
+    description: 'Forstå markedet og kom i posisjon før konkurransen.',
     isAddon: true,
     features: [
       'Markedsanalyse og trender',
@@ -48,7 +48,7 @@ const modules: Module[] = [
     name: 'Anbudshjelp AI',
     price: 1499,
     priceLabel: '+1 499 kr/mnd',
-    description: 'AI-drevet analyse av konkurransegrunnlag.',
+    description: 'AI-analyse, kvalifiseringssjekk og prosjektplan.',
     isAddon: true,
     features: [
       'Automatisk nedlasting av dokumenter',
@@ -187,8 +187,8 @@ export function PricingCalculator({
                 </span>
               </div>
               <p className="mt-1 text-sm text-navy-600">
-                Personlig rådgivning fra erfarne anbudskonsulenter via vår
-                partner TendPro.
+                Erfarne anbudskonsulenter som hjelper deg vinne — fra strategi
+                til ferdig tilbud.
               </p>
               <p className="mt-4">
                 <span className="mono-price text-xl text-navy-900">Etter avtale</span>
