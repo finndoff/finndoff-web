@@ -54,6 +54,7 @@ export interface FeatureGridSection {
   _key: string
   title?: string
   subtitle?: string
+  style?: SectionStyle
   columns?: 2 | 3 | 4
   features?: {
     _key: string
@@ -61,6 +62,7 @@ export interface FeatureGridSection {
     description?: string
     icon?: string
     link?: string
+    variant?: 'default' | 'highlighted' | 'muted'
   }[]
 }
 

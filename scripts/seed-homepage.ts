@@ -24,8 +24,8 @@ const portableText = (text: string) => [
   },
 ];
 
-// App-screenshot: innsikt-hero.png (904x488, landscape — passer laptop-rammen)
-const INNSIKT_HERO_IMAGE = "image-a4853624ba671ef7d88359d0d674e83b18d978a3-904x488-png";
+// App-screenshot: Anbudshjelp AI go/no-go beslutningsskjerm
+const HERO_IMAGE = "image-d7bfc69cdb19d8fd3f31cdb85639a20711534841-4340x2860-png";
 
 const homepage = {
   _id: "page-hjem",
@@ -38,15 +38,14 @@ const homepage = {
   sections: [
 
     // ── 1. HERO ───────────────────────────────────────────────────────────
-    // Endring #1: kvantifiserte stats under CTA
-    // Endring #5: app-screenshot i laptop-ramme
+    // Stitch S2-inspirert: fokusert hero uten søkefelt, stort screenshot
     {
       _type: "hero",
       _key: key(),
-      headline: "Vi hjelper norske bedrifter vinne anbud",
+      headline: "Vinn flere anbud med Finndoff på laget",
       subheadline:
-        "Ikke bare finne dem. Ikke bare varsle om dem. Vinne dem. Finndoff kombinerer fagkompetanse, teknologi og bransjenettverk slik at små og mellomstore bedrifter kan konkurrere — og slå — de store.",
-      showSearchBar: true,
+        "Finndoff kombinerer anbudskompetanse, AI og bransjedata slik at små og mellomstore bedrifter finner de rette anbudene, prioriterer smartere og leverer bedre tilbud.",
+      showSearchBar: false,
       primaryCta: {
         text: "Prøv gratis — vi setter opp alt",
         link: "https://finndoff.no/signup",
@@ -56,168 +55,130 @@ const homepage = {
         link: "#slik-fungerer-det",
       },
       stats: [
-        { _key: key(), value: "~600", label: "SMB-kunder" },
-        { _key: key(), value: "~90 %", label: "fornyelsesrate" },
-        { _key: key(), value: "4", label: "bransjeforeninger" },
+        { _key: key(), value: "835 mrd.", label: "kr i offentlige anbud årlig" },
+        { _key: key(), value: "1 500+", label: "bedrifter satt opp av eksperter" },
+        { _key: key(), value: "~90 %", label: "velger å fortsette" },
       ],
-      // Endring #5: laptop device frame med app-screenshot
       image: {
         _type: "image",
-        asset: { _type: "reference", _ref: INNSIKT_HERO_IMAGE },
-        alt: "Finndoff Innsikt — oversikt over anbud og markedsdata",
+        asset: { _type: "reference", _ref: HERO_IMAGE },
+        alt: "Anbudshjelp AI — go/no-go anbefaling basert på bedriftens data og historikk",
       },
-      deviceFrame: "laptop",
+      deviceFrame: "none",
       style: "default",
     },
 
-    // ── 2. TRUST BAR ──────────────────────────────────────────────────────
+    // ── 2. TRUST BAR — rett etter hero (S7) ──────────────────────────────
+    // Bransjeforeninger først, deretter kunder
     {
       _type: "trustBar",
       _key: key(),
-      title: "Betrodd av hundrevis av norske bedrifter og bransjeforeninger",
+      title: "Stolt samarbeidspartner med norske bransjeforeninger og bedrifter",
       style: "scrolling",
       logos: [
         "MEF",
-        "DHL",
-        "JobZone",
+        "Byggmesterforbundet",
+        "NESO",
+        "Arkitektbedriftene",
+        "Brødrene Dahl",
         "Vivende",
         "ALV",
-        "Arkitektbedriftene",
-        "Byggmesterforbundet",
-        "Brødrene Dahl",
+        "DHL",
         "BIRKsport",
         "Dignio",
-        "NESO",
         "HD Medical",
         "GP Gruppen",
         "NINA",
-        "Medicus",
         "Taraldsvik",
+        "JobZone",
+        "Medicus",
       ].map((name) => ({ _key: key(), name })),
     },
 
-    // ── 3. FEATURE GRID (produkter) ───────────────────────────────────────
+    // ── 3. MENNESKE + MASKIN (S2) ────────────────────────────────────────
+    // Mørk seksjon som bryter opp de lyse — visualiserer hybrid-modellen
     {
       _type: "featureGrid",
       _key: key(),
+      style: "dark",
       title: "Menneske + Maskin = Bedre anbudsresultater",
       subtitle:
         "Vi selger ikke software — vi selger vinnersjanse. Teknologi er verktøyet, kompetanse er produktet.",
-      columns: 4,
+      columns: 3,
+      features: [
+        {
+          _key: key(),
+          title: "Vi setter opp varslingen for deg",
+          description:
+            "Ekspertene våre konfigurerer søkeprofilen din basert på erfaring fra hundrevis av bedrifter. Du slipper støy og får kun relevante anbud — fra dag én.",
+          icon: "bell",
+        },
+        {
+          _key: key(),
+          title: "Vi hjelper deg prioritere riktig",
+          description:
+            "Forstå oppdragsgiver, konkurrenter og marked før du bestemmer deg. AI og markedsinnsikt gir deg forspranget du trenger.",
+          icon: "target",
+        },
+        {
+          _key: key(),
+          title: "Vi forsterker teamet ditt når det trengs",
+          description:
+            "Bruk AI til dokumentanalyse og prosjektplan på minutter. Eller koble på erfarne anbudskonsulenter når tilbudet skal vinnes.",
+          icon: "users",
+        },
+      ],
+    },
+
+    // ── 4. PRODUKTER 2x2 (S3) ────────────────────────────────────────────
+    // Visuelt differensierte produktkort — Anbudshjelp AI fremhevet som flaggskip
+    {
+      _type: "featureGrid",
+      _key: key(),
+      title: "Våre verktøy",
+      subtitle: "Alt du trenger for en effektiv anbudsprosess — fra varsling til ferdig tilbud.",
+      columns: 2,
       features: [
         {
           _key: key(),
           title: "Varsling",
           description:
-            "Finn de rette anbudene, uten støy. Vi setter opp søkeprofilen din med ekspertise fra hundrevis av bedrifter i din bransje.",
+            "Motta skreddersydde e-poster med kun relevante anbud. Ingen støy, bare muligheter. Ekspertoppsett av søkeprofil inkludert.",
           icon: "bell",
           link: "/varsling",
+          variant: "default",
         },
         {
           _key: key(),
           title: "Innsikt",
           description:
-            "Forstå markedet og kom i posisjon. Se hvem som vinner, analyser konkurrenter og finn muligheter før alle andre.",
+            "Se hvem konkurrentene dine vinner mot, og til hvilken pris. Overvåk rammeavtaler, innkjøpsplaner og oppdragsgivere.",
           icon: "bar-chart-2",
           link: "/innsikt",
+          variant: "default",
         },
         {
           _key: key(),
           title: "Anbudshjelp AI",
           description:
-            "AI som forsterker din kompetanse — les dokumenter, forstå krav og ta bedre bid/no-bid-beslutninger på minutter.",
+            "AI som forsterker din kompetanse — les tusenvis av sider med anbudsdokumenter på sekunder, få kvalifiseringssjekk og prosjektplan på minutter.",
           icon: "bot",
           link: "/anbudshjelp-ai",
+          variant: "highlighted",
         },
         {
           _key: key(),
           title: "Konsulent",
           description:
-            "Erfarne anbudskonsulenter som hjelper deg fra strategi til ferdig tilbud — din partner hele veien.",
+            "Få personlig hjelp av erfarne anbudskonsulenter. Fra strategi til ferdig tilbud — din partner hele veien. Fra 990,-/mnd.",
           icon: "users",
           link: "/konsulent",
+          variant: "muted",
         },
       ],
     },
 
-    // ── 4. MID-PAGE CTA ───────────────────────────────────────────────────
-    // Endring #7: CTA mellom featureGrid og timeline
-    {
-      _type: "ctaSection",
-      _key: key(),
-      title: "Klar til å vinne flere anbud?",
-      description:
-        "Med Finndoff på laget leverer du anbudet i tide, og vinnersjansen din er høyere. Start med en gratis prøveperiode.",
-      primaryCta: {
-        text: "Prøv gratis — vi setter opp alt",
-        link: "https://finndoff.no/signup",
-      },
-      secondaryCta: {
-        text: "Se priser",
-        link: "/priser",
-      },
-      style: "brand",
-    },
-
-    // ── 5. TIMELINE ───────────────────────────────────────────────────────
-    // Endring #3: reframed — fokus på "vi gjør alt", ikke antall dager
-    {
-      _type: "timeline",
-      _key: key(),
-      title: "Vi gjør jobben — du vinner anbud",
-      subtitle:
-        "I motsetning til selvbetjeningsverktøy og generisk AI setter vi opp alt for deg, basert på fagkompetanse og erfaring fra hundrevis av bedrifter.",
-      steps: [
-        {
-          _key: key(),
-          stepNumber: 1,
-          title: "Oppstartsmøte",
-          description:
-            "Vi kartlegger din bedrift og bransje. Du trenger bare 30 minutter — vi tar oss av resten.",
-          icon: "calendar",
-          duration: "Dag 1",
-        },
-        {
-          _key: key(),
-          stepNumber: 2,
-          title: "Ekspertoppsett",
-          description:
-            "Våre spesialister konfigurerer søkeprofilen din. Ingen skjemaer å fylle ut — vi bruker vår erfaring fra 1 000+ bedrifter.",
-          icon: "settings",
-          duration: "Dag 2–5",
-        },
-        {
-          _key: key(),
-          stepNumber: 3,
-          title: "Første varsler i innboksen",
-          description:
-            "Du mottar relevante anbud direkte på e-post. Enkle å lese, med fargekoder og tydelig oppsett.",
-          icon: "mail",
-          duration: "Dag 5–10",
-        },
-        {
-          _key: key(),
-          stepNumber: 4,
-          title: "Vi finjusterer for deg",
-          description:
-            "Gi én tommel opp eller ned på varslene — vi justerer profilen automatisk til du bare får det som er relevant.",
-          icon: "sliders",
-          duration: "Dag 10–15",
-        },
-        {
-          _key: key(),
-          stepNumber: 5,
-          title: "Null støy, kun muligheter",
-          description:
-            "Profilen er kalibrert. Du bruker 30 minutter i uken på anbud i stedet for 4–5 timer med manuelt søk.",
-          icon: "check-circle",
-          duration: "Dag 20",
-        },
-      ],
-    },
-
-    // ── 6. COMPARISON TABLE ───────────────────────────────────────────────
-    // Konkurransekart fra strategi v2
+    // ── 5. COMPARISON TABLE ──────────────────────────────────────────────
     {
       _type: "comparisonTable",
       _key: key(),
@@ -241,8 +202,7 @@ const homepage = {
       ],
     },
 
-    // ── 7. TESTIMONIAL GRID ───────────────────────────────────────────────
-    // Endring #2: 3 ekte kundesitatrader
+    // ── 6. TESTIMONIALS ──────────────────────────────────────────────────
     {
       _type: "testimonialGrid",
       _key: key(),
@@ -276,98 +236,8 @@ const homepage = {
       ],
     },
 
-    // ── 8. PARTNER SEKSJON ────────────────────────────────────────────────
-    // Endring #4: fremhev MEF, Byggmesterforbundet, NESO som offisielle partnere
-    {
-      _type: "featureGrid",
-      _key: key(),
-      title: "Ingen konkurrent har vår distribusjon",
-      subtitle:
-        "MEF, Arkitektbedriftene, Byggmesterforbundet og NESO — fire bransjeforeninger med over 1 000 uaktiverte potensielle kunder. Medlemmer får skreddersydde profiler og rabatt.",
-      columns: 3,
-      features: [
-        {
-          _key: key(),
-          title: "Maskinentreprenørenes Forbund (MEF)",
-          description:
-            "Offisiell partner for MEF Nords 334 medlemsbedrifter. Skreddersydde varslingsprofiler for anleggsbransjen, med særlig gunstige betingelser for MEF-medlemmer.",
-          icon: "hard-hat",
-          link: "/nyheter/partnerskap-med-maskinentreprenorenes-forbund-mef-nord",
-        },
-        {
-          _key: key(),
-          title: "Byggmesterforbundet",
-          description:
-            "Samarbeidsavtale med Byggmesterforbundet sikrer at norske byggmestere aldri går glipp av relevante offentlige oppdrag i sitt distrikt.",
-          icon: "building-2",
-          link: "/nyheter/samarbeidsavtale-med-byggmesterforbundet",
-        },
-        {
-          _key: key(),
-          title: "NESO",
-          description:
-            "Finndoff er offisiell partner med NESO — Norsk Elektro Serviceforbund. Medlemmer får skreddersydde anbudsvarsler for elektro og tekniske fag til medlemspris.",
-          icon: "zap",
-          link: "/nyheter/finndoff-inngar-samarbeid-med-neso-skreddersydd-anbudsvarsling-til-medlemspris",
-        },
-      ],
-    },
-
-    // ── 9. TRUST SIGNALER ─────────────────────────────────────────────────
-    // Endring #6: GDPR, norsk drift, kryptert, ingen binding
-    {
-      _type: "featureGrid",
-      _key: key(),
-      title: "Derfor velger SMB-er Finndoff",
-      subtitle: "Allerede validert — ~600 kunder og ~90 % fornyelse beviser etterspørselen.",
-      columns: 4,
-      features: [
-        {
-          _key: key(),
-          title: "Kompetanse over teknologi",
-          description: "Du får ikke bare et verktøy — du får folk som kan anbud. Vi selger vinnersjanse, ikke lisenser.",
-          icon: "award",
-        },
-        {
-          _key: key(),
-          title: "Politisk medvind",
-          description: "Stortinget og regjeringen vil ha flere SMB-er inn i offentlige anbud. Finndoff er svaret.",
-          icon: "trending-up",
-        },
-        {
-          _key: key(),
-          title: "Norsk og trygt",
-          description: "Etablert i 2021. Kontor i Oslo og Narvik. GDPR-sertifisert, kryptert og uten bindingstid.",
-          icon: "shield-check",
-        },
-        {
-          _key: key(),
-          title: "~90 % fornyelse",
-          description: "Nesten alle kundene våre velger å fortsette. Det er den beste kvalitetsgarantien vi kan gi.",
-          icon: "heart",
-        },
-      ],
-    },
-
-    // ── 10. SLUTT-CTA ─────────────────────────────────────────────────────
-    {
-      _type: "ctaSection",
-      _key: key(),
-      title: "Klar til å vinne ditt neste anbud?",
-      description:
-        "Med Finndoff på laget har du kompetanse, teknologi og bransjenettverk i ryggen. Start med en gratis prøveperiode.",
-      primaryCta: {
-        text: "Prøv gratis — vi setter opp alt",
-        link: "https://finndoff.no/signup",
-      },
-      secondaryCta: {
-        text: "Snakk med oss",
-        link: "/om-oss#kontakt",
-      },
-      style: "brand",
-    },
-
-    // ── 11. FAQ ───────────────────────────────────────────────────────────
+    // ── 7. FAQ ───────────────────────────────────────────────────────────
+    // Oppdatert med mer bransjespesifikke spørsmål
     {
       _type: "faqAccordion",
       _key: key(),
@@ -384,28 +254,7 @@ const homepage = {
           _key: key(),
           question: "Hva koster det?",
           answer: portableText(
-            "Varsling starter på 829 kr/mnd. Du kan legge til Innsikt (+649 kr/mnd) og Anbudshjelp AI (+1 499 kr/mnd) etter behov. Alle pakker inkluderer 2 brukere — ekstra brukere koster 199 kr/mnd."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hvordan kommer jeg i gang?",
-          answer: portableText(
-            "Registrer deg for en gratis prøveperiode. Vi booker et oppstartsmøte der vi kartlegger din bedrift, og setter opp søkeprofilen din med vår ekspertise. Du mottar de første varslene innen få dager."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hva gjør Finndoff annerledes enn Mercell og Cobrief?",
-          answer: portableText(
-            "Mercell er den dyre giganten laget for enterprise. Cobrief er en AI-autopilot uten faglig dybde. Finndoff er den faglige anbudspartneren — vi kombinerer ekspertoppsett, AI-verktøy, anbudskonsulenter og bransjeforeningspartnerskap. Ingen andre har denne kombinasjonen."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Kan jeg prøve gratis?",
-          answer: portableText(
-            "Ja! Vi tilbyr en gratis prøveperiode der vi setter opp en ekspertkonfigurert søkeprofil for din bedrift. Ingen bindingstid, ingen kredittkort — og vi gjør alt oppsettet for deg."
+            "Varsling starter på 829 kr/mnd — rett under 10 000 kr/år. Du kan legge til Innsikt (+649 kr/mnd) og Anbudshjelp AI (+1 499 kr/mnd) etter behov. Ingen bindingstid. Alle pakker inkluderer 2 brukere."
           ),
         },
         {
@@ -417,6 +266,27 @@ const homepage = {
         },
         {
           _key: key(),
+          question: "Hva gjør Finndoff annerledes enn Mercell og Cobrief?",
+          answer: portableText(
+            "Mercell er den dyre giganten laget for enterprise. Cobrief er en AI-autopilot uten faglig dybde. Finndoff er den faglige anbudspartneren — vi kombinerer ekspertoppsett, AI-verktøy, anbudskonsulenter og bransjeforeningspartnerskap. Ingen andre har denne kombinasjonen."
+          ),
+        },
+        {
+          _key: key(),
+          question: "Hva om vi aldri har levert anbud før?",
+          answer: portableText(
+            "Da er du i godt selskap — mange av kundene våre starter nettopp der. Vi hjelper deg fra første steg: setter opp varsling tilpasset din bransje, og ved behov kobler vi deg med erfarne anbudskonsulenter som hjelper med alt fra kvalifisering til ferdig tilbud."
+          ),
+        },
+        {
+          _key: key(),
+          question: "Kan jeg prøve gratis?",
+          answer: portableText(
+            "Ja! Vi tilbyr en gratis prøveperiode der vi setter opp en ekspertkonfigurert søkeprofil for din bedrift. Ingen bindingstid, ingen kredittkort — og vi gjør alt oppsettet for deg."
+          ),
+        },
+        {
+          _key: key(),
           question: "Er Finndoff kun for bygg og anlegg?",
           answer: portableText(
             "Nei — Finndoff brukes av bedrifter i mange bransjer, fra kjøttindustri og helsesektoren til IT og rådgivning. Bygg og anlegg er vårt kjernesegment med sterke bransjeforeningspartnerskap (MEF, NESO, Byggmesterforbundet), men vi hjelper alle som leverer til offentlig sektor."
@@ -424,11 +294,29 @@ const homepage = {
         },
       ],
     },
+
+    // ── 8. SLUTT-CTA ────────────────────────────────────────────────────
+    {
+      _type: "ctaSection",
+      _key: key(),
+      title: "Klar til å vinne ditt neste anbud?",
+      description:
+        "Med Finndoff på laget har du kompetanse, teknologi og bransjenettverk i ryggen. Start med en gratis prøveperiode.",
+      primaryCta: {
+        text: "Prøv gratis — vi setter opp alt",
+        link: "https://finndoff.no/signup",
+      },
+      secondaryCta: {
+        text: "Se priser",
+        link: "/priser",
+      },
+      style: "brand",
+    },
   ],
 };
 
 async function seed() {
-  console.log("🌱 Seeder forbedret hjemmeside til Sanity...\n");
+  console.log("🌱 Seeder omstrukturert hjemmeside til Sanity...\n");
 
   if (!process.env.SANITY_API_WRITE_TOKEN) {
     console.error("❌ Mangler SANITY_API_WRITE_TOKEN i .env.local");
@@ -438,18 +326,16 @@ async function seed() {
   try {
     await client.createOrReplace(homepage);
     console.log("✅ Hjemmeside oppdatert (id: page-hjem)");
-    console.log("\n📋 Seksjoner seeded:");
-    console.log("   1. Hero med stats + laptop-screenshot");
-    console.log("   2. TrustBar (16 logoer)");
-    console.log("   3. FeatureGrid (4 produkter)");
-    console.log("   4. Mid-page CTA (brand-stil)");
-    console.log("   5. Timeline (reframed: vi gjør alt for deg)");
-    console.log("   6. ComparisonTable (vs Doffin vs manuelt søk)");
-    console.log("   7. TestimonialGrid (3 ekte kundesitatrader)");
-    console.log("   8. FeatureGrid (partnere: MEF, Byggmesterforbundet, NESO)");
-    console.log("   9. FeatureGrid (trust-signaler: GDPR, norsk drift, kryptert, ingen binding)");
-    console.log("  10. Slutt-CTA");
-    console.log("  11. FAQ (7 spørsmål)");
+    console.log("\n📋 Seksjoner (8 — omstrukturert april 2026):");
+    console.log("   1. Hero (uten søkefelt, med stats + screenshot)");
+    console.log("   2. TrustBar (bransjeforeninger først, 16 logoer)");
+    console.log("   3. Menneske + Maskin (3-kolonne: varsling, prioritering, team)");
+    console.log("   4. Produkter 2x2 (Varsling, Innsikt, AI, Konsulent)");
+    console.log("   5. ComparisonTable (vs Mercell vs Cobrief)");
+    console.log("   6. Testimonials (3 kundesitatrader)");
+    console.log("   7. FAQ (7 spørsmål)");
+    console.log("   8. Slutt-CTA");
+    console.log("\n⚠️  Husk å kjøre seed-trustbar-logos.ts etterpå!");
   } catch (err) {
     console.error("❌ Seed feilet:", err);
     process.exit(1);
