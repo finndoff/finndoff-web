@@ -102,10 +102,10 @@ Full action plan: `docs/ux-review-konsolidert-april-2026.md`
 Design reference: `docs/Google Stitch designforslag 2 april 2026.rtf` (HTML prototype, open via browser)
 
 ### Top priorities (consensus from 5 sources)
-1. **Product screenshots** on all pages — most critical single gap
-2. **Stronger hero** with larger screenshot + proof row directly below
+1. ~~**Product screenshots** on all pages~~ — hero done (go/no-go AI screenshot)
+2. ~~**Stronger hero** with larger screenshot + proof row directly below~~ — done
 3. **Customer cases** with real names, companies, and numbers
-4. **Fewer homepage sections** (~8 instead of ~12) — Stitch-inspired structure
+4. ~~**Fewer homepage sections** (~8 instead of ~12)~~ — done (11→8)
 5. **Diversify testimonials** — stop reusing same Tore Killi quote everywhere
 
 ### Stitch-inspired changes to adopt (in Verkstedet style)
