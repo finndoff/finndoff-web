@@ -183,51 +183,7 @@ const product = {
       company: "Brødrene Killi AS",
     },
 
-    // 6. FaqAccordion (5 questions)
-    {
-      _type: "faqAccordion",
-      _key: key(),
-      title: "Ofte stilte spørsmål om Innsikt",
-      items: [
-        {
-          _key: key(),
-          question: "Hva er Finndoff Innsikt?",
-          answer: portableText(
-            "Finndoff Innsikt er en tilleggsmodul som gir deg strategisk markedsinnsikt — overvåkning av rammeavtaler, innkjøpsplaner, oppdragsgivere og konkurrenter. Den hjelper deg å posisjonere deg før konkurransen starter."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hva koster Innsikt?",
-          answer: portableText(
-            "Innsikt koster 649 kr/mnd som tillegg til Varsling (829 kr/mnd). Du trenger altså Varsling som grunnpakke for å bruke Innsikt."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hvor mange rammeavtaler dekker dere?",
-          answer: portableText(
-            "Vi har oversikt over mer enn 1 000 aktive rammeavtaler på tvers av sektorer og regioner. Databasen oppdateres løpende med nye avtaler og fornyelsesdatoer."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Kan jeg overvåke spesifikke oppdragsgivere?",
-          answer: portableText(
-            "Ja, du kan følge så mange oppdragsgivere du vil. Du får varsler når de legger ut nye kunngjøringer, og du kan kombinere overvåkning med CPV-koder for presise treff."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hva inneholder konkurrentanalysen?",
-          answer: portableText(
-            "Konkurrentanalysen viser hvem som vinner kontrakter i dine segmenter, kontraktsverdier, trender over tid og nye aktører i markedet. Du kan sette opp varsler for spesifikke konkurrenter."
-          ),
-        },
-      ],
-    },
-
-    // 7. CtaSection
+    // 6. CtaSection
     {
       _type: "ctaSection",
       _key: key(),

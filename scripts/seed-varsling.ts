@@ -182,51 +182,7 @@ const product = {
       company: "Brødrene Killi AS",
     },
 
-    // 5. FaqAccordion (5 questions)
-    {
-      _type: "faqAccordion",
-      _key: key(),
-      title: "Ofte stilte spørsmål om Varsling",
-      items: [
-        {
-          _key: key(),
-          question: "Hva er Finndoff Varsling?",
-          answer: portableText(
-            "Finndoff Varsling er en anbudsvarslingstjeneste som bruker CPV-koder, nøkkelord og geografiske filtre for å levere relevante offentlige anbud direkte i innboksen din. Tjenesten inkluderer ekspertoppsett og løpende optimalisering."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hva koster Varsling?",
-          answer: portableText(
-            "Varsling koster 829 kr/mnd og inkluderer 2 brukere. Ekstra brukere koster 199 kr/mnd per bruker. Varsling er grunnpakken som kreves for å bruke tilleggsmodulene Innsikt og Anbudshjelp AI."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hvordan skiller Finndoff seg fra Mercell og Cobrief?",
-          answer: portableText(
-            "Mercell er dyrt og bygget for enterprise. Cobrief gir deg gratis AI-varsling uten faglig dybde. Finndoff gir deg ekspertoppsett av varslingsprofiler, avanserte filtre, automatisk kommunegjenkjenning og løpende support fra en dedikert rådgiver — en faglig partner, ikke bare et verktøy."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Kan jeg prøve tjenesten før jeg bestemmer meg?",
-          answer: portableText(
-            "Ja! Vi tilbyr en uforpliktende prøveperiode på 20 dager med full støtte. Du får evalueringsmøte og beslutningsmøte inkludert — og bestemmer selv om du vil fortsette."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Finnes det en mobilapp?",
-          answer: portableText(
-            "Ja, Finndoff har dedikerte apper for iOS og Android. Du kan også lese varslinger på e-post og i nettportalen — alt er responsivt og fungerer på alle enheter."
-          ),
-        },
-      ],
-    },
-
-    // 6. CtaSection
+    // 5. CtaSection
     {
       _type: "ctaSection",
       _key: key(),

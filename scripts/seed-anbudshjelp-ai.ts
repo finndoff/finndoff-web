@@ -24,187 +24,111 @@ const portableText = (text: string) => [
   },
 ];
 
+// Produktbilde lastet opp via Sanity Studio
+const PRODUCT_IMAGE =
+  "image-c3e4072535dbbb80adf5f1c6d9ffab621fa3b398-4340x2860-png";
+
 const product = {
   _id: "product-anbudshjelp-ai",
   _type: "product",
   title: "Anbudshjelp AI",
   slug: { _type: "slug", current: "anbudshjelp-ai" },
   subtitle:
-    "AI som forsterker din kompetanse — fra dokumentanalyse til prosjektplan på minutter.",
+    "Les 2000 sider på 15 minutter. Få sjekkliste over alle krav. Vit om du kvalifiserer før du bruker en time.",
   description:
-    "Anbudshjelp AI er verktøyet, ikke produktet. Den analyserer konkurransegrunnlag, sjekker kvalifikasjonskrav og lager en prosjektplan — slik at du kan bruke tiden på det som vinner anbud: faglig kvalitet.",
+    "Anbudshjelp AI analyserer konkurransegrunnlag, sjekker kvalifikasjonskrav og lager prosjektplan — slik at du kan bruke tiden på det som vinner anbud: faglig kvalitet i tilbudet.",
   icon: "bot",
   price: 1499,
   priceLabel: "+1 499 kr/mnd",
   isAddon: true,
-  seoTitle: "Anbudshjelp AI — AI som forsterker din kompetanse | Finndoff",
+  seoTitle: "Anbudshjelp AI — Les tusenvis av sider på minutter | Finndoff",
   seoDescription:
-    "AI-analyse av konkurransegrunnlag, kvalifiseringssjekk og prosjektplan — på minutter. AI er verktøyet, din kompetanse er det som vinner.",
+    "AI-analyse av konkurransegrunnlag, kvalifiseringssjekk og prosjektplan — på minutter i stedet for timer. Tilleggsmodul til Finndoff Varsling.",
   sections: [
-    // 1. Hero
+    // ── 1. HERO — med screenshot og proof row ────────────────────────────
     {
       _type: "hero",
       _key: key(),
-      headline: "AI som forsterker din kompetanse",
+      headline: "Du bygger. Vi leser anbudsdokumentene.",
       subheadline:
-        "Fra timer til minutter — AI analyserer konkurransegrunnlaget slik at du kan fokusere på det som vinner: faglig kvalitet i tilbudet.",
+        "Anbudshjelp AI leser tusenvis av sider på minutter, sjekker om du kvalifiserer og lager en prosjektplan — slik at du kan bruke tiden på det du er best på.",
       primaryCta: {
-        text: "Prøv gratis",
+        text: "Prøv gratis — vi setter opp alt",
         link: "https://app.finndoff.no/register",
       },
       secondaryCta: {
         text: "Book demo med Daniel",
         link: "https://meetings-eu1.hubspot.com/daniel-dalsborg",
       },
-      style: "default",
+      image: {
+        _type: "image",
+        asset: { _type: "reference", _ref: PRODUCT_IMAGE },
+        alt: "Anbudshjelp AI — go/no-go anbefaling med kvalifiseringssjekk og prosjektplan",
+      },
+      deviceFrame: "none",
+      stats: [
+        { _key: key(), value: "15 min", label: "i stedet for 3–5 timer" },
+        { _key: key(), value: "2000+", label: "sider analysert automatisk" },
+        { _key: key(), value: "1 499,-", label: "kr/mnd som tillegg" },
+      ],
+      style: "dark",
     },
 
-    // 2. ComparisonTable
-    {
-      _type: "comparisonTable",
-      _key: key(),
-      title: "AI + fagkompetanse = bedre beslutninger",
-      subtitle:
-        "AI er verktøyet, ikke produktet. Se hvordan AI-analyse kombinert med din kompetanse gir bedre resultater.",
-      columns: [
-        { _key: key(), name: "Uten AI", highlighted: false },
-        { _key: key(), name: "Med Finndoff AI", highlighted: true },
-      ],
-      rows: [
-        {
-          _key: key(),
-          feature: "Lese dokumenter",
-          values: [
-            "Timer med manuell gjennomgang",
-            "AI leser og oppsummerer på sekunder",
-          ],
-        },
-        {
-          _key: key(),
-          feature: "Forstå krav",
-          values: [
-            "Lett å overse viktige detaljer",
-            "Automatisk sjekkliste over alle krav",
-          ],
-        },
-        {
-          _key: key(),
-          feature: "Kvalifiseringssjekk",
-          values: [
-            "Usikker på om du kvalifiserer",
-            "Umiddelbar sjekk mot kravene",
-          ],
-        },
-        {
-          _key: key(),
-          feature: "Bid/no-bid",
-          values: [
-            "Magefølelse og gjetting",
-            "Datadrevet anbefaling med begrunnelse",
-          ],
-        },
-        {
-          _key: key(),
-          feature: "Prosjektplan",
-          values: [
-            "Starter fra scratch hver gang",
-            "AI-generert fremdriftsplan med milepæler",
-          ],
-        },
-        {
-          _key: key(),
-          feature: "Nedlasting av dokumenter",
-          values: [
-            "Manuelt fra Doffin/TED",
-            "Automatisk nedlasting og organisering",
-          ],
-        },
-        {
-          _key: key(),
-          feature: "Tidsbruk per anbud",
-          values: [
-            "3–5 timer på vurdering",
-            "15–30 minutter med full oversikt",
-          ],
-        },
-      ],
-    },
-
-    // 3. FeatureGrid (6 features, 3 columns)
+    // ── 2. HVEM ER DETTE FOR — gjenkjenning for MEF-folk ────────────────
     {
       _type: "featureGrid",
       _key: key(),
-      title: "Seks funksjoner som forsterker din kompetanse",
-      subtitle: "AI gjør deg raskere — din fagkunnskap gjør deg til en vinner",
+      title: "Laget for deg som leverer — ikke for de som sitter på kontoret",
+      subtitle:
+        "Du har ikke en anbudsavdeling. Du har en daglig leder som jobber 12-timers dager og leser anbudsdokumenter på kvelden. Anbudshjelp AI gjør den jobben for deg.",
       columns: 3,
       features: [
         {
           _key: key(),
-          title: "Automatisk nedlasting",
+          title: "Entreprenører og håndverkere",
           description:
-            "Alle dokumenter fra konkurransegrunnlaget lastes ned og organiseres automatisk — klar til gjennomgang.",
-          icon: "download",
+            "Du vinner jobber på kvalitet og erfaring — ikke på å lese 200 sider med kravspesifikasjoner. AI gjør grunnarbeidet, du tar beslutningen.",
+          icon: "hard-hat",
         },
         {
           _key: key(),
-          title: "Kvalifiseringssjekk",
+          title: "Små team, store ambisjoner",
           description:
-            "AI sjekker automatisk om din bedrift oppfyller kvalifikasjonskravene og gir deg en klar oversikt.",
-          icon: "shield-check",
+            "Når hele firmaet er 5–15 folk, har du ikke tid til å bruke en uke på hvert anbud. Med AI er vurderingen klar på en kaffekopp.",
+          icon: "users",
         },
         {
           _key: key(),
-          title: "AI-analyse",
+          title: "Første gang på anbud?",
           description:
-            "Konkurransegrunnlaget analyseres og oppsummeres — du får de viktigste punktene uten å lese alt selv.",
-          icon: "brain",
-        },
-        {
-          _key: key(),
-          title: "Oppgaveplan",
-          description:
-            "AI genererer en fremdriftsplan med milepæler og frister tilpasset anbudets krav og tidslinje.",
-          icon: "list-checks",
-        },
-        {
-          _key: key(),
-          title: "Bid/No-bid (Kommer)",
-          description:
-            "Datadrevet anbefaling om du bør gi tilbud, basert på kvalifikasjonskrav, konkurranse og din kapasitet.",
-          icon: "scale",
-        },
-        {
-          _key: key(),
-          title: "Gjenbruk (Kommer)",
-          description:
-            "Gjenbruk tekst og dokumenter fra tidligere tilbud. AI matcher relevante avsnitt til nye krav.",
-          icon: "recycle",
+            "AI gir deg en sjekkliste over alle krav, forteller deg hva du trenger, og lager en plan du kan følge steg for steg. Du trenger ikke ha gjort dette før.",
+          icon: "rocket",
         },
       ],
     },
 
-    // 4. Timeline (5 steps)
+    // ── 3. SLIK FUNGERER DET — timeline ──────────────────────────────────
     {
       _type: "timeline",
       _key: key(),
-      title: "Slik fungerer det",
+      title: "Fra varsel til ferdig plan — på 15 minutter",
       subtitle:
-        "Fra varsel til ferdig prosjektplan — AI gjør grunnarbeidet slik at du kan fokusere på strategi og faglig kvalitet.",
+        "AI gjør grunnarbeidet. Du tar beslutningen.",
       steps: [
         {
           _key: key(),
           stepNumber: 1,
-          title: "Anbudsvarsel",
+          title: "Du får et varsel",
           description:
-            "Du mottar et relevant anbudsvarsel og åpner anbudet i Finndoff.",
+            "Et relevant anbud dukker opp i innboksen din. Du åpner det i Finndoff.",
           icon: "bell",
         },
         {
           _key: key(),
           stepNumber: 2,
-          title: "Automatisk nedlasting",
+          title: "AI laster ned alt",
           description:
-            "Alle dokumenter fra konkurransegrunnlaget lastes ned og organiseres automatisk.",
+            "Alle dokumenter fra konkurransegrunnlaget lastes ned og organiseres automatisk. Ingen manuell leting.",
           icon: "download",
         },
         {
@@ -212,44 +136,146 @@ const product = {
           stepNumber: 3,
           title: "Kvalifiseringssjekk",
           description:
-            "AI sjekker kvalifikasjonskravene mot din bedriftsprofil og gir deg en klar anbefaling.",
+            "AI sjekker kravene mot din bedrift og gir deg en klar anbefaling: kvalifisert eller ikke — med begrunnelse.",
           icon: "shield-check",
         },
         {
           _key: key(),
           stepNumber: 4,
-          title: "AI-analyse",
+          title: "Oppsummering og analyse",
           description:
-            "Konkurransegrunnlaget analyseres — du får en oppsummering av krav, tildelingskriterier og viktige frister.",
+            "Du får de viktigste punktene: krav, tildelingskriterier, frister og fallgruver — uten å lese alt selv.",
           icon: "brain",
         },
         {
           _key: key(),
           stepNumber: 5,
-          title: "Prosjektplan",
+          title: "Ferdig prosjektplan",
           description:
-            "AI genererer en fremdriftsplan med oppgaver, milepæler og frister du kan følge til tilbudsfristen.",
+            "AI lager en fremdriftsplan med oppgaver, milepæler og frister du kan følge helt til innlevering.",
           icon: "list-checks",
         },
       ],
     },
 
-    // 5. TextSection
+    // ── 4. FEATURES — 6 funksjoner ──────────────────────────────────────
     {
-      _type: "textSection",
+      _type: "featureGrid",
       _key: key(),
-      title: "Prosjektverktøy for tilbudsarbeidet",
-      content: [
-        ...portableText(
-          "Anbudshjelp AI gir deg ikke bare analyse — den gir deg et komplett prosjektverktøy for tilbudsarbeidet. Fremdriftsplanen inkluderer en tidslinje med milepæler, en anbudstavle for oppgavestyring, og oversikt over alle frister."
-        ),
-        ...portableText(
-          "Du kan dele prosjektet med kolleger, tildele oppgaver og følge fremdriften i sanntid. Alt er koblet til det opprinnelige konkurransegrunnlaget, slik at du alltid har konteksten du trenger."
-        ),
+      title: "Alt du trenger for å vurdere og vinne",
+      subtitle:
+        "Seks funksjoner som sparer deg timer på hvert eneste anbud",
+      columns: 3,
+      features: [
+        {
+          _key: key(),
+          title: "Automatisk nedlasting",
+          description:
+            "Alle dokumenter fra konkurransegrunnlaget organiseres og gjøres klare — ingen manuell leting på Doffin.",
+          icon: "download",
+        },
+        {
+          _key: key(),
+          title: "Kvalifiseringssjekk",
+          description:
+            "Oppfyller du kravene? AI sjekker og gir deg svar med begrunnelse — før du investerer en eneste time.",
+          icon: "shield-check",
+        },
+        {
+          _key: key(),
+          title: "AI-analyse av dokumenter",
+          description:
+            "Tusenvis av sider lest og oppsummert. Du får det som er viktig: krav, kriterier, frister og risiko.",
+          icon: "brain",
+        },
+        {
+          _key: key(),
+          title: "Prosjektplan med milepæler",
+          description:
+            "Fra analyse til innlevering — AI lager en fremdriftsplan med oppgaver og frister tilpasset anbudet.",
+          icon: "list-checks",
+        },
+        {
+          _key: key(),
+          title: "Go/no-go anbefaling",
+          description:
+            "Datadrevet anbefaling om du bør gi tilbud, basert på krav, konkurranse og din kapasitet.",
+          icon: "scale",
+        },
+        {
+          _key: key(),
+          title: "Del med teamet",
+          description:
+            "Del prosjektet med kolleger, tildel oppgaver og følg fremdriften. Alt koblet til konkurransegrunnlaget.",
+          icon: "share-2",
+        },
       ],
     },
 
-    // 6. Testimonial
+    // ── 5. COMPARISON — uten AI vs med AI ────────────────────────────────
+    {
+      _type: "comparisonTable",
+      _key: key(),
+      title: "Tirsdag kveld, klokken 22",
+      subtitle:
+        "Du sitter med en anbudsfrist om 10 dager og et konkurransegrunnlag på 300 sider. Forskjellen?",
+      columns: [
+        { _key: key(), name: "Uten AI", highlighted: false },
+        { _key: key(), name: "Med Anbudshjelp AI", highlighted: true },
+      ],
+      rows: [
+        {
+          _key: key(),
+          feature: "Lese dokumentene",
+          values: [
+            "3–5 timer manuell gjennomgang",
+            "15 minutter — AI oppsummerer det viktigste",
+          ],
+        },
+        {
+          _key: key(),
+          feature: "Forstå alle krav",
+          values: [
+            "Lett å overse detaljer i 300 sider",
+            "Komplett sjekkliste over alle krav",
+          ],
+        },
+        {
+          _key: key(),
+          feature: "Kvalifiserer vi?",
+          values: [
+            "Usikker — bruker tid på å finne ut",
+            "Svar med begrunnelse på minutter",
+          ],
+        },
+        {
+          _key: key(),
+          feature: "Bør vi levere tilbud?",
+          values: [
+            "Magefølelse",
+            "Datadrevet anbefaling",
+          ],
+        },
+        {
+          _key: key(),
+          feature: "Prosjektplan",
+          values: [
+            "Starter fra scratch",
+            "Ferdig plan med milepæler og frister",
+          ],
+        },
+        {
+          _key: key(),
+          feature: "Kvelden din",
+          values: [
+            "Dokumentlesing til midnatt",
+            "Hjemme til middag",
+          ],
+        },
+      ],
+    },
+
+    // ── 6. TESTIMONIAL ───────────────────────────────────────────────────
     {
       _type: "testimonial",
       _key: key(),
@@ -260,64 +286,13 @@ const product = {
       company: "Brødrene Killi AS",
     },
 
-    // 7. FaqAccordion
-    {
-      _type: "faqAccordion",
-      _key: key(),
-      title: "Ofte stilte spørsmål om Anbudshjelp AI",
-      items: [
-        {
-          _key: key(),
-          question: "Hva er Anbudshjelp AI?",
-          answer: portableText(
-            "Anbudshjelp AI er et AI-drevet verktøy som automatisk analyserer konkurransegrunnlag, sjekker kvalifikasjonskrav og lager en prosjektplan for tilbudsarbeidet. Det er en tilleggsmodul til Finndoff Varsling."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hva koster Anbudshjelp AI?",
-          answer: portableText(
-            "Anbudshjelp AI koster 1 499 kr/mnd som tillegg til Varsling (829 kr/mnd). Du trenger altså Varsling som grunnpakke for å bruke Anbudshjelp AI."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hvilke dokumenter kan AI-en analysere?",
-          answer: portableText(
-            "AI-en analyserer alle vanlige dokumentformater i konkurransegrunnlag, inkludert PDF, Word og Excel. Den håndterer både norske og engelske dokumenter."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hvor lang tid tar en analyse?",
-          answer: portableText(
-            "En typisk analyse tar 1–3 minutter, avhengig av størrelsen på konkurransegrunnlaget. Sammenlignet med 3–5 timer manuelt arbeid er det en betydelig tidsbesparelse."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Kan jeg stole på AI-analysen?",
-          answer: portableText(
-            "AI-analysen er et kraftig hjelpemiddel som gir deg en rask oversikt og sjekkliste. Vi anbefaler alltid å gjøre en endelig gjennomgang selv — AI-en erstatter ikke faglig skjønn, men gjør deg mye raskere."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hva er bid/no-bid-funksjonen?",
-          answer: portableText(
-            "Bid/no-bid er en kommende funksjon som gir deg en datadrevet anbefaling om du bør gi tilbud på et anbud, basert på kvalifikasjonskrav, konkurransesituasjon og din kapasitet."
-          ),
-        },
-      ],
-    },
-
-    // 8. CtaSection
+    // ── 7. CTA ───────────────────────────────────────────────────────────
     {
       _type: "ctaSection",
       _key: key(),
-      title: "Klar til å la AI forsterke din kompetanse?",
+      title: "Klar til å bruke kveldene på noe annet enn dokumentlesing?",
       description:
-        "Prøv Anbudshjelp AI gratis. Fra timer til minutter på analyse — slik at du kan bruke tiden på det som faktisk vinner anbud.",
+        "Prøv Anbudshjelp AI gratis. Vi setter opp alt — du trenger bare 30 minutter.",
       primaryCta: {
         text: "Start gratis prøveperiode",
         link: "https://app.finndoff.no/register",
@@ -345,8 +320,16 @@ async function seed() {
   try {
     await client.createOrReplace(product);
     console.log(
-      "Anbudshjelp AI product created/updated successfully (id: product-anbudshjelp-ai)"
+      "✅ Anbudshjelp AI oppdatert (id: product-anbudshjelp-ai)"
     );
+    console.log("\n📋 Seksjoner (7):");
+    console.log("   1. Hero (screenshot + proof row: 15min/2000+/1499,-)");
+    console.log("   2. Hvem er dette for (3 målgrupper)");
+    console.log("   3. Slik fungerer det (5-stegs timeline)");
+    console.log("   4. Funksjoner (6 features)");
+    console.log("   5. Comparison (uten AI vs med AI)");
+    console.log("   6. Testimonial");
+    console.log("   7. Slutt-CTA");
   } catch (err) {
     console.error("Failed to seed Anbudshjelp AI:", err);
     process.exit(1);

@@ -85,17 +85,34 @@ npx tsx scripts/seed-trustbar-logos.ts # Uploads logo images (run AFTER homepage
 - `SectionWrapper` handles section styling: `default` (transparent), `dark` (verksted-gradient + blueprint grid), `brand` (teal)
 - **Module components** (`src/components/modules/`): Hero, CtaSection, FeatureGrid, PricingTable, PricingCalculator, TrustBar, Testimonial, FaqAccordion, VideoEmbed, Timeline, PartnerShowcase, ComparisonTable, TextSection, TeamGrid, ContactSection
 - **UI primitives** (`src/components/ui/`): Button, SectionWrapper, SanityImage, PortableTextRenderer, DynamicIcon, DeviceFrame
-- **Layout**: Navigation (dark glass-dark header), Footer (navy-900), LayoutShell (wraps with Nav + Footer, hides on `/studio`)
+- **Layout**: Navigation (dark glass-dark header with Produkter dropdown), Footer (navy-900), LayoutShell (wraps with Nav + Footer, hides on `/studio`)
+- **Standalone pages**: `HjelpesenterPage.tsx` (client, category sidebar + accordions + search)
 
 ### Sanity schemas
 - **Documents** (9): page, blogPost, product, person, partner, faq, customerCase, siteSettings, legalDocument
 - **Modules** (15): hero, featureGrid, pricingTable, pricingCalculator, trustBar, testimonial, videoEmbed, ctaSection, faqAccordion, timeline, partnerShowcase, comparisonTable, textSection, teamGrid, contactSection
+
+### Navigation structure
+```
+Produkter ▾ | Priser | Om oss | Nyheter | Hjelpesenter
+```
+- "Produkter" dropdown: Varsling, Innsikt, Anbudshjelp AI, Konsulent (with icons + descriptions)
+- Desktop: hover dropdown, mobile: tap-to-expand
+- Hjelpesenter is a standalone page (`/hjelpesenter`) with 53 FAQ documents in 9 categories
+
+### FAQ architecture
+- **Homepage**: Embedded `faqAccordion` module (9 prospect-focused SEO questions) — seeded via `seed-homepage.ts`
+- **Hjelpesenter** (`/hjelpesenter`): Standalone `faq` documents in Sanity, fetched via `faqsQuery`, rendered by `HjelpesenterPage.tsx`
+- **Product pages**: No FAQ sections (removed — all FAQ content lives in hjelpesenter or homepage)
+- **Categories** (9): kom-i-gang, varslinger-og-treff, cpv-koder-og-sokeord, brukere-og-tilgang, innlogging-og-teknisk, abonnement-og-oppsigelse, faktura-og-betaling, om-finndoff, beste-praksis
+- Seed script: `npx tsx scripts/seed-hjelpesenter-faq.ts`
 
 ### Key behaviors
 - `Hero.tsx` renders both CTA buttons and search bar when `showSearchBar` is true (not either/or)
 - `LayoutShell.tsx` passes `logoDarkUrl` (white logo) to Navigation and Footer
 - Button component auto-detects internal/external links
 - DynamicIcon returns `null` for unmapped icon names (no error, just invisible)
+- Never name competitors (Mercell, Cobrief) negatively on public pages — neutral mentions OK
 
 ## Current Work — UX Improvements (April 2026)
 Full action plan: `docs/ux-review-konsolidert-april-2026.md`
@@ -105,8 +122,12 @@ Design reference: `docs/Google Stitch designforslag 2 april 2026.rtf` (HTML prot
 1. ~~**Product screenshots** on all pages~~ — hero done (go/no-go AI screenshot)
 2. ~~**Stronger hero** with larger screenshot + proof row directly below~~ — done
 3. **Customer cases** with real names, companies, and numbers
-4. ~~**Fewer homepage sections** (~8 instead of ~12)~~ — done (11→8)
+4. ~~**Fewer homepage sections** (~8 instead of ~12)~~ — done (11→7)
 5. **Diversify testimonials** — stop reusing same Tore Killi quote everywhere
+6. ~~**Comparison table removed**~~ — competitive framing is internal only
+7. ~~**FAQ restructured**~~ — hjelpesenter (53 docs) + prospect FAQ (9 on homepage) + removed from product pages
+8. ~~**Navigation restructured**~~ — Produkter dropdown + Hjelpesenter link
+9. ~~**Anbudshjelp AI page overhauled**~~ — MEF Nord-rettet, screenshot, proof row, "hvem er dette for"
 
 ### Stitch-inspired changes to adopt (in Verkstedet style)
 - S1: Tighter page flow: Hero → Proof Row → Hybrid Model → Products → Comparison → Case → Pricing → FAQ → CTA

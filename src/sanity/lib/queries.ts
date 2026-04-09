@@ -116,12 +116,13 @@ export const blogPostSlugsQuery = `*[_type == "blogPost" && defined(slug.current
   _updatedAt
 }`
 
-// Fetch all FAQs, grouped by category
-export const faqsQuery = `*[_type == "faq"] | order(category asc) {
+// Fetch all FAQs, ordered by category then sortOrder
+export const faqsQuery = `*[_type == "faq"] | order(category asc, sortOrder asc) {
   _id,
   question,
   answer,
   category,
+  sortOrder,
   product-> { title, slug }
 }`
 

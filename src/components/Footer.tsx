@@ -14,6 +14,7 @@ const companyLinks = [
   { label: 'Nyheter', href: '/nyheter' },
   { label: 'Personvern', href: '/personvern' },
   { label: 'Vilkår', href: '/vilkar' },
+  { label: 'Hjelpesenter', href: '/hjelpesenter' },
   { label: 'Kontakt', href: '/om-oss#kontakt' },
 ]
 

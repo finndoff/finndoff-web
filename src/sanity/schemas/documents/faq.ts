@@ -23,14 +23,24 @@ export default defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'Generelt', value: 'generelt' },
-          { title: 'Priser', value: 'priser' },
-          { title: 'Varsling', value: 'varsling' },
-          { title: 'Innsikt', value: 'innsikt' },
-          { title: 'Anbudshjelp AI', value: 'anbudshjelp-ai' },
-          { title: 'Konto', value: 'konto' },
+          { title: 'Kom i gang', value: 'kom-i-gang' },
+          { title: 'Varslinger og treff', value: 'varslinger-og-treff' },
+          { title: 'CPV-koder og søkeord', value: 'cpv-koder-og-sokeord' },
+          { title: 'Brukere, mottakere og tilgang', value: 'brukere-og-tilgang' },
+          { title: 'Innlogging og tekniske spørsmål', value: 'innlogging-og-teknisk' },
+          { title: 'Abonnement, prøvetid og oppsigelse', value: 'abonnement-og-oppsigelse' },
+          { title: 'Faktura og betaling', value: 'faktura-og-betaling' },
+          { title: 'Om Finndoff og andre løsninger', value: 'om-finndoff' },
+          { title: 'Beste praksis', value: 'beste-praksis' },
         ],
       },
+    }),
+    defineField({
+      name: 'sortOrder',
+      title: 'Sortering',
+      type: 'number',
+      description: 'Lavere tall vises først innen kategorien',
+      initialValue: 0,
     }),
     defineField({
       name: 'product',
@@ -41,9 +51,12 @@ export default defineType({
   ],
   orderings: [
     {
-      title: 'Kategori',
-      name: 'categoryAsc',
-      by: [{ field: 'category', direction: 'asc' }],
+      title: 'Kategori + sortering',
+      name: 'categorySortOrder',
+      by: [
+        { field: 'category', direction: 'asc' },
+        { field: 'sortOrder', direction: 'asc' },
+      ],
     },
   ],
   preview: {

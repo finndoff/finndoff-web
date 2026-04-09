@@ -141,72 +141,7 @@ const page = {
       ],
     },
 
-    // 4. FaqAccordion (pricing-specific)
-    {
-      _type: "faqAccordion",
-      _key: key(),
-      title: "Ofte stilte spørsmål om priser",
-      items: [
-        {
-          _key: key(),
-          question: "Er det bindingstid?",
-          answer: portableText(
-            "Nei, det er ingen bindingstid. Du kan si opp når som helst, og abonnementet løper ut ved slutten av inneværende måned."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hva er inkludert i grunnpakken Varsling?",
-          answer: portableText(
-            "Varsling inkluderer daglige anbudsvarsler tilpasset din bedrift, ekspertoppsett av søkeprofil, overvåking av Doffin og TED, e-post- og app-varsler, og 2 brukere."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Kan jeg legge til moduler senere?",
-          answer: portableText(
-            "Ja, du kan legge til og fjerne tilleggsmoduler når som helst. Endringen trer i kraft umiddelbart, og prisen justeres fra neste faktura."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hva koster ekstra brukere?",
-          answer: portableText(
-            "De første 2 brukerne er inkludert i Varsling. Ekstra brukere koster 199 kr/mnd per bruker."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Finnes det en gratis prøveperiode?",
-          answer: portableText(
-            "Ja, du kan prøve Finndoff gratis. Registrer deg på app.finndoff.no for å komme i gang."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Trenger jeg Varsling for å bruke tilleggsmodulene?",
-          answer: portableText(
-            "Ja, Varsling er grunnpakken og kreves for alle tilleggsmoduler. Innsikt, Anbudshjelp AI og Konsulent er tillegg som bygger på Varsling."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Hva er forskjellen på Anbudshjelp AI og Anbudskonsulent?",
-          answer: portableText(
-            "Anbudshjelp AI er et AI-verktøy som automatisk analyserer konkurransegrunnlag og lager prosjektplaner. Anbudskonsulent gir deg personlig rådgivning fra erfarne konsulenter via vår partner TendPro. Du kan bruke begge, eller velge den som passer best for din bedrift."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Er prisene eks. eller inkl. mva?",
-          answer: portableText(
-            "Alle priser er oppgitt eksklusiv merverdiavgift (mva)."
-          ),
-        },
-      ],
-    },
-
-    // 5. CtaSection
+    // 4. CtaSection
     {
       _type: "ctaSection",
       _key: key(),

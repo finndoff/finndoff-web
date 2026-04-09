@@ -61,6 +61,7 @@ import {
   Rocket,
   Video,
   Headphones,
+  Share2,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -129,6 +130,7 @@ const iconMap: Record<string, LucideIcon> = {
   rocket: Rocket,
   video: Video,
   headphones: Headphones,
+  'share-2': Share2,
 }
 
 export function DynamicIcon({

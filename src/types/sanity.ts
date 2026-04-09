@@ -139,6 +139,15 @@ export interface FaqAccordionSection {
   }[]
 }
 
+export interface FaqDocument {
+  _id: string
+  question: string
+  answer: PortableTextBlock[]
+  category: string
+  sortOrder?: number
+  product?: { title: string; slug: { current: string } }
+}
+
 export interface TimelineSection {
   _type: 'timeline'
   _key: string

@@ -44,7 +44,7 @@ const homepage = {
       _key: key(),
       headline: "Vinn flere anbud med Finndoff på laget",
       subheadline:
-        "Finndoff kombinerer anbudskompetanse, AI og bransjedata slik at små og mellomstore bedrifter finner de rette anbudene, prioriterer smartere og leverer bedre tilbud.",
+        "Finndoff følger deg gjennom hele anbudsprosessen — fra varsling og kvalifisering til ferdig tilbud. Med eksperter, AI og bransjenettverk i ryggen. Du velger modulene du trenger, og betaler bare for det du bruker.",
       showSearchBar: false,
       primaryCta: {
         text: "Prøv gratis — vi setter opp alt",
@@ -178,31 +178,7 @@ const homepage = {
       ],
     },
 
-    // ── 5. COMPARISON TABLE ──────────────────────────────────────────────
-    {
-      _type: "comparisonTable",
-      _key: key(),
-      title: "Hvorfor Finndoff vinner",
-      subtitle:
-        "I et marked delt mellom en dyr gigant og rene AI-utfordrere tar Finndoff posisjonen som den faglige anbudspartneren.",
-      columns: [
-        { _key: key(), name: "Finndoff", highlighted: true },
-        { _key: key(), name: "Mercell", highlighted: false },
-        { _key: key(), name: "Cobrief", highlighted: false },
-      ],
-      rows: [
-        { _key: key(), feature: "Posisjon", values: ["Faglig anbudspartner", "Infrastruktur-monopolet", "AI-autopiloten"] },
-        { _key: key(), feature: "Ekspertoppsett av søkeprofil", values: ["true", "false", "false"] },
-        { _key: key(), feature: "Bransjepartnerskaper (MEF, NESO m.fl.)", values: ["true", "false", "false"] },
-        { _key: key(), feature: "Anbudskonsulenter", values: ["true", "false", "Kun AI"] },
-        { _key: key(), feature: "AI-analyse av dokumenter", values: ["true", "Begrenset", "true"] },
-        { _key: key(), feature: "Markedsinnsikt", values: ["true", "true", "Tillegg"] },
-        { _key: key(), feature: "Pris fra", values: ["829 kr/mnd", "1 000+ kr/mnd", "Gratis (begrenset)"] },
-        { _key: key(), feature: "Bygget for", values: ["Norske SMB-er", "Enterprise", "Alle med AI"] },
-      ],
-    },
-
-    // ── 6. TESTIMONIALS ──────────────────────────────────────────────────
+    // ── 5. TESTIMONIALS ──────────────────────────────────────────────────
     {
       _type: "testimonialGrid",
       _key: key(),
@@ -236,8 +212,7 @@ const homepage = {
       ],
     },
 
-    // ── 7. FAQ ───────────────────────────────────────────────────────────
-    // Oppdatert med mer bransjespesifikke spørsmål
+    // ── 7. FAQ — prospect-fokusert (SEO) ──────────────────────────────────
     {
       _type: "faqAccordion",
       _key: key(),
@@ -261,21 +236,42 @@ const homepage = {
           _key: key(),
           question: "Trenger jeg å sette opp noe selv?",
           answer: portableText(
-            "Nei. I motsetning til selvbetjeningsverktøy og generisk AI setter våre eksperter opp alt for deg. Vi konfigurerer søkeprofilen basert på erfaring fra hundrevis av bedrifter i din bransje. Du trenger bare 30 minutter til et oppstartsmøte."
+            "Nei. Våre eksperter setter opp alt for deg. Vi konfigurerer søkeprofilen basert på erfaring fra hundrevis av bedrifter i din bransje. Du trenger bare 30 minutter til et oppstartsmøte."
           ),
         },
         {
           _key: key(),
-          question: "Hva gjør Finndoff annerledes enn Mercell og Cobrief?",
+          question: "Hva skiller Finndoff fra andre varslingstjenester?",
           answer: portableText(
-            "Mercell er den dyre giganten laget for enterprise. Cobrief er en AI-autopilot uten faglig dybde. Finndoff er den faglige anbudspartneren — vi kombinerer ekspertoppsett, AI-verktøy, anbudskonsulenter og bransjeforeningspartnerskap. Ingen andre har denne kombinasjonen."
+            "Finndoff er bygd som en faglig partner, ikke bare et varslingssystem. Vi kombinerer ekspertoppsett av søkeprofil, AI-drevet dokumentanalyse, tilgang til erfarne anbudskonsulenter, og partnerskap med bransjeforeninger som MEF, NESO og Byggmesterforbundet. Det er denne kombinasjonen som gjør at kundene våre vinner flere anbud."
           ),
         },
         {
           _key: key(),
-          question: "Hva om vi aldri har levert anbud før?",
+          question: "Er Finndoff det samme som Doffin?",
           answer: portableText(
-            "Da er du i godt selskap — mange av kundene våre starter nettopp der. Vi hjelper deg fra første steg: setter opp varsling tilpasset din bransje, og ved behov kobler vi deg med erfarne anbudskonsulenter som hjelper med alt fra kvalifisering til ferdig tilbud."
+            "Nei. Doffin er den offentlige kunngjøringsplattformen. Finndoff er en varslingstjeneste som overvåker markedet for deg med skreddersydde søkeprofiler — slik at du slipper å lete manuelt på Doffin hver dag."
+          ),
+        },
+        {
+          _key: key(),
+          question: "Hvordan fungerer varslingene?",
+          answer: portableText(
+            "Vi setter opp en skreddersydd søkeprofil basert på dine tjenester, CPV-koder og geografi. Når relevante anbud publiseres, får du varsel på e-post. Søket justeres løpende for å sikre at du får mest mulig relevante treff og minimal støy."
+          ),
+        },
+        {
+          _key: key(),
+          question: "Hva er CPV-koder, og trenger jeg å kunne dem?",
+          answer: portableText(
+            "CPV-koder er standardiserte kategorier som brukes i offentlige anbud. Du trenger ikke kunne dem — vi setter opp de riktige kodene for deg basert på hva bedriften din leverer. Riktige CPV-koder er nøkkelen til relevante varsler."
+          ),
+        },
+        {
+          _key: key(),
+          question: "Hvordan går jeg fra varsel til faktisk tilbud?",
+          answer: portableText(
+            "Finndoff varsler deg og lenker direkte til kunngjøringen. Derfra leser du konkurransegrunnlaget og leverer tilbud i oppdragsgivers system (alltid gratis). Med Anbudshjelp AI kan du analysere dokumentene automatisk, og med Konsulent får du personlig hjelp hele veien til ferdig tilbud."
           ),
         },
         {
@@ -283,13 +279,6 @@ const homepage = {
           question: "Kan jeg prøve gratis?",
           answer: portableText(
             "Ja! Vi tilbyr en gratis prøveperiode der vi setter opp en ekspertkonfigurert søkeprofil for din bedrift. Ingen bindingstid, ingen kredittkort — og vi gjør alt oppsettet for deg."
-          ),
-        },
-        {
-          _key: key(),
-          question: "Er Finndoff kun for bygg og anlegg?",
-          answer: portableText(
-            "Nei — Finndoff brukes av bedrifter i mange bransjer, fra kjøttindustri og helsesektoren til IT og rådgivning. Bygg og anlegg er vårt kjernesegment med sterke bransjeforeningspartnerskap (MEF, NESO, Byggmesterforbundet), men vi hjelper alle som leverer til offentlig sektor."
           ),
         },
       ],
@@ -326,15 +315,14 @@ async function seed() {
   try {
     await client.createOrReplace(homepage);
     console.log("✅ Hjemmeside oppdatert (id: page-hjem)");
-    console.log("\n📋 Seksjoner (8 — omstrukturert april 2026):");
+    console.log("\n📋 Seksjoner (7 — april 2026):");
     console.log("   1. Hero (uten søkefelt, med stats + screenshot)");
     console.log("   2. TrustBar (bransjeforeninger først, 16 logoer)");
     console.log("   3. Menneske + Maskin (3-kolonne: varsling, prioritering, team)");
     console.log("   4. Produkter 2x2 (Varsling, Innsikt, AI, Konsulent)");
-    console.log("   5. ComparisonTable (vs Mercell vs Cobrief)");
-    console.log("   6. Testimonials (3 kundesitatrader)");
-    console.log("   7. FAQ (7 spørsmål)");
-    console.log("   8. Slutt-CTA");
+    console.log("   5. Testimonials (3 kundesitatrader)");
+    console.log("   6. FAQ (9 prospect-spørsmål, SEO-optimalisert)");
+    console.log("   7. Slutt-CTA");
     console.log("\n⚠️  Husk å kjøre seed-trustbar-logos.ts etterpå!");
   } catch (err) {
     console.error("❌ Seed feilet:", err);
