@@ -47,6 +47,7 @@ export default async function ProductPage({ params }: Props) {
   if (!product) notFound()
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://finndoff.no'
+  const firstSectionIsHero = product.sections?.[0]?._type === 'hero'
 
   return (
     <>
@@ -93,7 +94,8 @@ export default async function ProductPage({ params }: Props) {
           ],
         }}
       />
-      {/* Product header */}
+      {/* Product header — skjules når første seksjon er en hero (som tar over jobben) */}
+      {!firstSectionIsHero && (
       <section className="bg-white pb-8 pt-16">
         <div className="mx-auto max-w-4xl px-6 text-center">
           {product.icon && (
@@ -124,6 +126,7 @@ export default async function ProductPage({ params }: Props) {
           )}
         </div>
       </section>
+      )}
 
       {/* Sections from Sanity */}
       <PageBuilder sections={product.sections} />

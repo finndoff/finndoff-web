@@ -201,6 +201,7 @@ export interface TextSectionSection {
   _key: string
   title?: string
   content?: PortableTextBlock[]
+  style?: SectionStyle
 }
 
 export interface PricingCalculatorSection {

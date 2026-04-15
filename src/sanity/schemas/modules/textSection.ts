@@ -26,6 +26,19 @@ export default defineType({
         },
       ],
     }),
+    defineField({
+      name: 'style',
+      title: 'Stil',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Standard (lys)', value: 'default' },
+          { title: 'Mørk (navy)', value: 'dark' },
+          { title: 'Brand (teal)', value: 'brand' },
+        ],
+      },
+      initialValue: 'default',
+    }),
   ],
   preview: {
     select: { title: 'title' },
