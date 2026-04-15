@@ -14,9 +14,9 @@ const client = createClient({
 
 const key = () => randomUUID().slice(0, 8);
 
-// Auto-linkifies support@finndoff.no mentions in answer text so the FAQ
+// Auto-linkifies hjelp@finndoff.no mentions in answer text so the FAQ
 // renders clickable mailto: links without hand-crafting markDefs per item.
-const EMAIL_RE = /(support@finndoff\.no)/g;
+const EMAIL_RE = /(hjelp@finndoff\.no)/g;
 
 const portableText = (text: string) => {
   const parts = text.split(EMAIL_RE);
@@ -25,9 +25,9 @@ const portableText = (text: string) => {
 
   for (const part of parts) {
     if (!part) continue;
-    if (part === "support@finndoff.no") {
+    if (part === "hjelp@finndoff.no") {
       const markKey = key();
-      markDefs.push({ _key: markKey, _type: "link", href: "mailto:support@finndoff.no" });
+      markDefs.push({ _key: markKey, _type: "link", href: "mailto:hjelp@finndoff.no" });
       children.push({ _type: "span", _key: key(), text: part, marks: [markKey] });
     } else {
       children.push({ _type: "span", _key: key(), text: part, marks: [] });
@@ -184,27 +184,27 @@ const faqData: {
       {
         question: "Hvordan legger vi til flere mottakere?",
         answer:
-          "Send oss en e-post til support@finndoff.no med navn og e-postadresse for den nye mottakeren, så ordner vi det. Ekstra brukere koster 199 kr/mnd.",
+          "Send oss en e-post til hjelp@finndoff.no med navn og e-postadresse for den nye mottakeren, så ordner vi det. Ekstra brukere koster 199 kr/mnd.",
       },
       {
         question: "Kan vi sende varsler til en felles e-postadresse?",
         answer:
-          "Ja. Mange bedrifter sender varsler til en felles innboks, for eksempel anbud@ eller firmapost. Send oss en e-post til support@finndoff.no, så setter vi det opp.",
+          "Ja. Mange bedrifter sender varsler til en felles innboks, for eksempel anbud@ eller firmapost. Send oss en e-post til hjelp@finndoff.no, så setter vi det opp.",
       },
       {
         question: "Kan vi bytte mottaker?",
         answer:
-          "Ja. Når ansatte slutter eller skifter rolle, oppdaterer vi mottakerlisten. Send oss en e-post til support@finndoff.no med hvem som skal legges til og fjernes.",
+          "Ja. Når ansatte slutter eller skifter rolle, oppdaterer vi mottakerlisten. Send oss en e-post til hjelp@finndoff.no med hvem som skal legges til og fjernes.",
       },
       {
         question: "Kan vi se hvilke brukere og mottakere vi har?",
         answer:
-          "Ja. Send oss en e-post til support@finndoff.no, så gir vi deg en oversikt over hvem som er knyttet til abonnementet deres.",
+          "Ja. Send oss en e-post til hjelp@finndoff.no, så gir vi deg en oversikt over hvem som er knyttet til abonnementet deres.",
       },
       {
         question: "Hvordan bytter vi administrator?",
         answer:
-          "Send oss en e-post til support@finndoff.no med informasjon om ny og gammel administrator, så oppdaterer vi kontoen.",
+          "Send oss en e-post til hjelp@finndoff.no med informasjon om ny og gammel administrator, så oppdaterer vi kontoen.",
       },
     ],
   },
@@ -285,7 +285,7 @@ const faqData: {
       {
         question: "Jeg har spørsmål om en faktura — hvem kontakter jeg?",
         answer:
-          "Send en e-post til support@finndoff.no med fakturanummer og spørsmålet ditt, så hjelper vi deg.",
+          "Send en e-post til hjelp@finndoff.no med fakturanummer og spørsmålet ditt, så hjelper vi deg.",
       },
       {
         question: "Kan vi få faktura i stedet for korttrekk?",
@@ -295,12 +295,12 @@ const faqData: {
       {
         question: "Kan vi endre fakturamottaker?",
         answer:
-          "Ja. Send den nye fakturaadressen eller kontaktpersonen til support@finndoff.no, så oppdaterer vi det.",
+          "Ja. Send den nye fakturaadressen eller kontaktpersonen til hjelp@finndoff.no, så oppdaterer vi det.",
       },
       {
         question: "Kan vi legge til bestillerreferanse eller prosjektnummer på fakturaen?",
         answer:
-          "Ja. Send ønsket referanse til support@finndoff.no, så legger vi det inn. Mange større bedrifter trenger dette for intern behandling.",
+          "Ja. Send ønsket referanse til hjelp@finndoff.no, så legger vi det inn. Mange større bedrifter trenger dette for intern behandling.",
       },
       {
         question: "Hva gjør jeg hvis fakturaen er feil?",

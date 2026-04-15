@@ -272,7 +272,7 @@ export function HjelpesenterPage({ faqs }: { faqs: FaqDocument[] }) {
                 </p>
                 <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                   <a
-                    href="mailto:support@finndoff.no"
+                    href="mailto:hjelp@finndoff.no"
                     className="font-display rounded-lg bg-accent-500 px-6 py-2.5 text-sm font-semibold text-navy-900 transition-colors hover:bg-accent-400"
                   >
                     Send oss en e-post
@@ -314,11 +314,11 @@ export function HjelpesenterPage({ faqs }: { faqs: FaqDocument[] }) {
             </div>
             <div className="space-y-2">
               <a
-                href="mailto:support@finndoff.no"
+                href="mailto:hjelp@finndoff.no"
                 className="flex items-center gap-2.5 rounded-lg border border-navy-100 px-3 py-2.5 text-sm text-navy-700 transition-colors hover:border-primary-300 hover:bg-primary-50"
               >
                 <Mail className="h-4 w-4 text-primary-500" />
-                <span className="flex-1">support@finndoff.no</span>
+                <span className="flex-1">hjelp@finndoff.no</span>
               </a>
               <a
                 href="/om-oss#kontakt"
@@ -333,15 +333,19 @@ export function HjelpesenterPage({ faqs }: { faqs: FaqDocument[] }) {
         <button
           type="button"
           onClick={() => setContactOpen((v) => !v)}
-          className="flex items-center gap-2 rounded-full bg-navy-900 px-5 py-3 font-display text-sm font-semibold text-white shadow-verksted-lg transition-all hover:bg-navy-800 hover:shadow-verksted-hover"
+          className={`flex items-center gap-2.5 rounded-full px-6 py-4 font-display text-base font-semibold shadow-verksted-lg transition-all hover:shadow-verksted-hover ${
+            contactOpen
+              ? 'bg-navy-900 text-white hover:bg-navy-800'
+              : 'bg-accent-500 text-navy-900 hover:bg-accent-400 pulse-glow'
+          }`}
           aria-expanded={contactOpen}
         >
           {contactOpen ? (
-            <X className="h-4 w-4" />
+            <X className="h-5 w-5" />
           ) : (
-            <MessageCircle className="h-4 w-4" />
+            <MessageCircle className="h-5 w-5" />
           )}
-          <span>{contactOpen ? 'Lukk' : 'Kontakt oss'}</span>
+          <span>{contactOpen ? 'Lukk' : 'Trenger du hjelp?'}</span>
         </button>
       </div>
     </div>
