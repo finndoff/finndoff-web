@@ -13,6 +13,9 @@ import {
   Trophy,
   ChevronDown,
   Search,
+  MessageCircle,
+  Mail,
+  X,
 } from 'lucide-react'
 import { PortableTextRenderer } from '@/components/ui/PortableTextRenderer'
 import type { FaqDocument } from '@/types/sanity'
@@ -33,6 +36,7 @@ export function HjelpesenterPage({ faqs }: { faqs: FaqDocument[] }) {
   const [activeCategory, setActiveCategory] = useState(FAQ_CATEGORIES[0].slug)
   const [openItem, setOpenItem] = useState<string | null>(null)
   const [search, setSearch] = useState('')
+  const [contactOpen, setContactOpen] = useState(false)
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
   const scrollingRef = useRef(false)
 
@@ -284,6 +288,61 @@ export function HjelpesenterPage({ faqs }: { faqs: FaqDocument[] }) {
             </div>
           </main>
         </div>
+      </div>
+
+      {/* Persistent contact widget — floating bottom-right */}
+      <div className="fixed bottom-6 right-6 z-40">
+        {contactOpen && (
+          <div className="mb-3 w-72 rounded-xl border border-navy-100 bg-white p-5 shadow-verksted-lg">
+            <div className="mb-3 flex items-start justify-between">
+              <div>
+                <p className="font-display text-base font-semibold text-navy-900">
+                  Trenger du hjelp?
+                </p>
+                <p className="mt-0.5 text-xs text-navy-500">
+                  Vi svarer vanligvis innen en time.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setContactOpen(false)}
+                className="rounded-md p-1 text-navy-400 hover:bg-navy-50 hover:text-navy-600"
+                aria-label="Lukk"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+            <div className="space-y-2">
+              <a
+                href="mailto:support@finndoff.no"
+                className="flex items-center gap-2.5 rounded-lg border border-navy-100 px-3 py-2.5 text-sm text-navy-700 transition-colors hover:border-primary-300 hover:bg-primary-50"
+              >
+                <Mail className="h-4 w-4 text-primary-500" />
+                <span className="flex-1">support@finndoff.no</span>
+              </a>
+              <a
+                href="/om-oss#kontakt"
+                className="flex items-center gap-2.5 rounded-lg bg-accent-500 px-3 py-2.5 text-sm font-semibold text-navy-900 transition-colors hover:bg-accent-400"
+              >
+                <MessageCircle className="h-4 w-4" />
+                <span className="flex-1">Send oss en melding</span>
+              </a>
+            </div>
+          </div>
+        )}
+        <button
+          type="button"
+          onClick={() => setContactOpen((v) => !v)}
+          className="flex items-center gap-2 rounded-full bg-navy-900 px-5 py-3 font-display text-sm font-semibold text-white shadow-verksted-lg transition-all hover:bg-navy-800 hover:shadow-verksted-hover"
+          aria-expanded={contactOpen}
+        >
+          {contactOpen ? (
+            <X className="h-4 w-4" />
+          ) : (
+            <MessageCircle className="h-4 w-4" />
+          )}
+          <span>{contactOpen ? 'Lukk' : 'Kontakt oss'}</span>
+        </button>
       </div>
     </div>
   )

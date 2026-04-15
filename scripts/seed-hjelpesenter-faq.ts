@@ -14,15 +14,36 @@ const client = createClient({
 
 const key = () => randomUUID().slice(0, 8);
 
-const portableText = (text: string) => [
-  {
-    _type: "block",
-    _key: key(),
-    style: "normal",
-    markDefs: [],
-    children: [{ _type: "span", _key: key(), text, marks: [] }],
-  },
-];
+// Auto-linkifies support@finndoff.no mentions in answer text so the FAQ
+// renders clickable mailto: links without hand-crafting markDefs per item.
+const EMAIL_RE = /(support@finndoff\.no)/g;
+
+const portableText = (text: string) => {
+  const parts = text.split(EMAIL_RE);
+  const markDefs: { _key: string; _type: "link"; href: string }[] = [];
+  const children: { _type: "span"; _key: string; text: string; marks: string[] }[] = [];
+
+  for (const part of parts) {
+    if (!part) continue;
+    if (part === "support@finndoff.no") {
+      const markKey = key();
+      markDefs.push({ _key: markKey, _type: "link", href: "mailto:support@finndoff.no" });
+      children.push({ _type: "span", _key: key(), text: part, marks: [markKey] });
+    } else {
+      children.push({ _type: "span", _key: key(), text: part, marks: [] });
+    }
+  }
+
+  return [
+    {
+      _type: "block",
+      _key: key(),
+      style: "normal",
+      markDefs,
+      children,
+    },
+  ];
+};
 
 // ─── FAQ data by category ────────────────────────────────────────────────────
 
@@ -163,27 +184,27 @@ const faqData: {
       {
         question: "Hvordan legger vi til flere mottakere?",
         answer:
-          "Kontakt oss med navn og e-postadresse for den nye mottakeren, så ordner vi det. Ekstra brukere koster 199 kr/mnd.",
+          "Send oss en e-post til support@finndoff.no med navn og e-postadresse for den nye mottakeren, så ordner vi det. Ekstra brukere koster 199 kr/mnd.",
       },
       {
         question: "Kan vi sende varsler til en felles e-postadresse?",
         answer:
-          "Ja. Mange bedrifter sender varsler til en felles innboks, for eksempel anbud@ eller firmapost. Ta kontakt, så setter vi det opp.",
+          "Ja. Mange bedrifter sender varsler til en felles innboks, for eksempel anbud@ eller firmapost. Send oss en e-post til support@finndoff.no, så setter vi det opp.",
       },
       {
         question: "Kan vi bytte mottaker?",
         answer:
-          "Ja. Når ansatte slutter eller skifter rolle, oppdaterer vi mottakerlisten. Send oss en e-post med hvem som skal legges til og fjernes.",
+          "Ja. Når ansatte slutter eller skifter rolle, oppdaterer vi mottakerlisten. Send oss en e-post til support@finndoff.no med hvem som skal legges til og fjernes.",
       },
       {
         question: "Kan vi se hvilke brukere og mottakere vi har?",
         answer:
-          "Ja. Ta kontakt med oss, så gir vi deg en oversikt over hvem som er knyttet til abonnementet deres.",
+          "Ja. Send oss en e-post til support@finndoff.no, så gir vi deg en oversikt over hvem som er knyttet til abonnementet deres.",
       },
       {
         question: "Hvordan bytter vi administrator?",
         answer:
-          "Send oss en e-post med informasjon om ny og gammel administrator, så oppdaterer vi kontoen.",
+          "Send oss en e-post til support@finndoff.no med informasjon om ny og gammel administrator, så oppdaterer vi kontoen.",
       },
     ],
   },
@@ -227,12 +248,12 @@ const faqData: {
       {
         question: "Hvordan sier jeg opp abonnementet?",
         answer:
-          "Send en e-post til support@finndoff.no med kundenummer og ønske om oppsigelse. Du kan også bruke kontaktskjemaet på nettsiden. Du beholder tilgangen ut inneværende periode.",
+          "Alle abonnement har 12 måneders løpetid. Én måned før fornyelsesdato sender vi deg et varsel med tilbud om å gjøre justeringer på abonnementet eller si opp. Dersom du sier opp før fornyelsesdato, blir du ikke fakturert for den kommende perioden.",
       },
       {
         question: "Hva er oppsigelsestiden?",
         answer:
-          "Det er ingen bindingstid. Du kan si opp når som helst, og abonnementet avsluttes ved slutten av inneværende måned.",
+          "Abonnementet løper i 12 måneder om gangen. Du får varsel én måned før fornyelse og kan da enten justere abonnementet eller si opp før fornyelsesdato — slik at du ikke faktureres for en ny periode.",
       },
       {
         question: "Får jeg bekreftelse når abonnementet er sagt opp?",
@@ -274,12 +295,12 @@ const faqData: {
       {
         question: "Kan vi endre fakturamottaker?",
         answer:
-          "Ja. Send oss den nye fakturaadressen eller kontaktpersonen, så oppdaterer vi det.",
+          "Ja. Send den nye fakturaadressen eller kontaktpersonen til support@finndoff.no, så oppdaterer vi det.",
       },
       {
         question: "Kan vi legge til bestillerreferanse eller prosjektnummer på fakturaen?",
         answer:
-          "Ja. Send oss ønsket referanse, så legger vi det inn. Mange større bedrifter trenger dette for intern behandling.",
+          "Ja. Send ønsket referanse til support@finndoff.no, så legger vi det inn. Mange større bedrifter trenger dette for intern behandling.",
       },
       {
         question: "Hva gjør jeg hvis fakturaen er feil?",
