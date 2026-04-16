@@ -2,6 +2,25 @@
 
 Next.js 16 marketing site for Finndoff — **den faglige anbudspartneren** for norske SMB-er i offentlige anbud.
 
+---
+
+## ⚠️ ARKITEKTUR-SKIFTE 2026-04-16 — dette repoet blir arkivert
+
+Prosjektet deployes **ikke** lenger som egen Next.js-app på Vercel. Hele markedssiden skal integreres inn i `doffin-alerts`-appen (som samtidig migreres CRA → Next.js 16 App Router, deploy på Azure Static Web Apps).
+
+- **Kjernebeslutning:** markedsinnhold må SSR-es. Alt annet er sekundære innsats/risiko-avveininger.
+- **Ny hjem for kodebase:** `/Users/hjalmarboe/Utvikling/doffin-alerts/Frontend/doffin-alerts/`
+- **Sanity:** prosjekt-ID `tuwrtxu5` uendret. Studio flyttes fra dette repoet → doffin-alerts (`/studio`-rute)
+- **Host:** Azure SWA (utgangspunkt), Container Apps som fallback — ikke Vercel
+- **Styling-port:** 15 Sanity-moduler re-implementeres fra Tailwind → MUI
+- **Dette repoet:** frosset, arkiveres etter migrering. Alt nytt arbeid skjer i doffin-alerts.
+
+**Full implementasjonsplan:** [`docs/implementasjonsplan-integrering-i-react-app.md`](docs/implementasjonsplan-integrering-i-react-app.md) (Håvard bruker denne med Claude Code i VS Code)
+
+Alt under denne seksjonen beskriver repoet slik det ser ut i dag og er nyttig for å forstå hva som skal portes.
+
+---
+
 ## Stack
 - **Framework**: Next.js 16 (App Router) + TypeScript
 - **CMS**: Sanity v3 (embedded studio at `/studio`)

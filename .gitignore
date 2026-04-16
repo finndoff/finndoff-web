@@ -33,8 +33,13 @@ yarn-error.log*
 .env*
 !.env.example
 
-# internal docs
-/docs/
+# internal docs (forskningsmateriale, PDF-er, etc.) — ignorer alt unntatt sjekkede inn planer
+/docs/**
+!/docs/
+!/docs/implementasjonsplan-integrering-i-react-app.md
+
+# Claude Code local settings
+/.claude/
 
 # wix migration exports (genererte data, ikke kildekode)
 /scripts/wix-export/
